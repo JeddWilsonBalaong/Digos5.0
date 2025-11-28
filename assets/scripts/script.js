@@ -2,6 +2,39 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Mobile sidebar menu functionality
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const sidebarMenu = document.querySelector('.modern-nav-menu');
+    
+    // Toggle sidebar menu
+    navbarToggler.addEventListener('click', function() {
+        navbarCollapse.classList.toggle('show');
+    });
+    
+    // Close sidebar when clicking on overlay
+    navbarCollapse.addEventListener('click', function(e) {
+        if (e.target === navbarCollapse) {
+            navbarCollapse.classList.remove('show');
+        }
+    });
+    
+    // Close sidebar when clicking the close button (::before pseudo element)
+    sidebarMenu.addEventListener('click', function(e) {
+        const rect = sidebarMenu.getBoundingClientRect();
+        const closeButtonArea = {
+            x: rect.right - 55,
+            y: rect.top + 15,
+            width: 35,
+            height: 35
+        };
+        
+        if (e.clientX >= closeButtonArea.x && e.clientX <= closeButtonArea.x + closeButtonArea.width &&
+            e.clientY >= closeButtonArea.y && e.clientY <= closeButtonArea.y + closeButtonArea.height) {
+            navbarCollapse.classList.remove('show');
+        }
+    });
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -17,12 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
                 
-                // Close mobile menu if open
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse.classList.contains('show')) {
-                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-                    bsCollapse.hide();
-                }
+                // Close mobile sidebar if open
+                navbarCollapse.classList.remove('show');
             }
         });
     });
