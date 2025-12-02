@@ -11,6 +11,7 @@
         crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/privacy-modal.css" rel="stylesheet">
 </head>
 
 <body>
@@ -80,7 +81,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#news">
+                            <a class="nav-link" href="news.html">
                                 <i class="fas fa-newspaper nav-icon"></i>
                                 <span>News</span>
                             </a>
@@ -98,7 +99,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">
+                            <a class="nav-link" href="#">
                                 <i class="fas fa-info-circle nav-icon"></i>
                                 <span>About</span>
                             </a>
@@ -352,7 +353,7 @@
                             <li class="mb-2"><a href="#home" class="text-decoration-none">Home</a></li>
                             <li class="mb-2"><a href="#products" class="text-decoration-none">Services</a>
                             </li>
-                            <li class="mb-2"><a href="#news" class="text-decoration-none">News</a></li>
+                            <li class="mb-2"><a href="news.html" class="text-decoration-none">News</a></li>
                             <li class="mb-2"><a href="#foreclosed" class="text-decoration-none">Properties</a>
                             </li>
                             <li class="mb-2"><a href="#reports" class="text-decoration-none">Reports</a>
@@ -395,17 +396,59 @@
             </div>
 
             <div class="footer-bottom border-top pt-3 text-center">
-                <p class="mb-0">&copy; 2025 RBDI. All rights reserved. | Privacy Policy | Terms of
+                <p class="mb-0">&copy; 2025 RBDI. All rights reserved. | <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a> | Terms of
                 Service | PDIC Insured</p>
             </div>
         </div>
     </footer>
+
+    <!-- Privacy Policy Acceptance Dialog -->
+    <div id="privacyModal" class="privacy-modal">
+        <div class="privacy-modal-content">
+            <div class="privacy-modal-header">
+                <div class="privacy-icon">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <h3>Privacy Policy & Cookie Notice</h3>
+                <p class="privacy-subtitle">Your privacy matters to us</p>
+            </div>
+            
+            <div class="privacy-modal-body">
+                <p>We use cookies and similar technologies to enhance your browsing experience, provide personalized content, and analyze our traffic. By continuing to use our website, you consent to our use of cookies and agree to our Privacy Policy.</p>
+                
+                <div class="privacy-highlights">
+                    <div class="privacy-highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>We protect your personal information</span>
+                    </div>
+                    <div class="privacy-highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>We comply with Philippine Data Privacy Act</span>
+                    </div>
+                    <div class="privacy-highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>We never sell your data to third parties</span>
+                    </div>
+                </div>
+                
+                <div class="privacy-actions">
+                    <button id="acceptPrivacy" class="btn btn-accept">
+                        <i class="fas fa-check me-2"></i>Accept All
+                    </button>
+                    <button id="declinePrivacy" class="btn btn-decline">
+                        <i class="fas fa-times me-2"></i>Decline
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap 5.3 JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/privacy-modal.js"></script>
 </body>
 
 </html>

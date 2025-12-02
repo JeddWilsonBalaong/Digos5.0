@@ -11,6 +11,7 @@
         crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/privacy-modal.css" rel="stylesheet">
 </head>
 
 <body>
@@ -80,7 +81,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#news">
+                            <a class="nav-link" href="news.html">
                                 <i class="fas fa-newspaper nav-icon"></i>
                                 <span>News</span>
                             </a>
@@ -309,15 +310,15 @@
                             <h6>Other Reports</h6>
                         </div>
                         <div class="download-list">
-                            <a href="#" onclick="downloadReport('PPBS_092025')" class="download-item">
+                            <a href="#" onclick="downloadReport('PPBS_092025.pdf')" class="download-item">
                                 <i class="fas fa-file-pdf"></i>
                                 <span>Balance Sheet September 2025</span>
                             </a>
-                            <a href="#" onclick="downloadReport('PPBS_062025')" class="download-item">
+                            <a href="#" onclick="downloadReport('PPBS_062025.pdf')" class="download-item">
                                 <i class="fas fa-file-pdf"></i>
                                 <span>Balance Sheet June 2025</span>
                             </a>
-                            <a href="#" onclick="downloadReport('PPBS_032025')" class="download-item">
+                            <a href="#" onclick="downloadReport('PPBS_032025.pdf')" class="download-item">
                                 <i class="fas fa-file-pdf"></i>
                                 <span>Balance Sheet March 2025</span>
                             </a>
@@ -376,50 +377,140 @@
             </div>
 
             <div class="footer-bottom border-top pt-3 text-center">
-                <p class="mb-0">&copy; 2025 RBDI. All rights reserved. | Privacy Policy | Terms of Service | PDIC Insured</p>
+                <p class="mb-0">&copy; 2025 RBDI. All rights reserved. | <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a> | Terms of Service | PDIC Insured</p>
             </div>
         </div>
     </footer>
+
+    <!-- Privacy Policy Acceptance Dialog -->
+    <div id="privacyModal" class="privacy-modal">
+        <div class="privacy-modal-content">
+            <div class="privacy-modal-header">
+                <div class="privacy-icon">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <h3>Privacy Policy & Cookie Notice</h3>
+                <p class="privacy-subtitle">Your privacy matters to us</p>
+            </div>
+            
+            <div class="privacy-modal-body">
+                <p>We use cookies and similar technologies to enhance your browsing experience, provide personalized content, and analyze our traffic. By continuing to use our website, you consent to our use of cookies and agree to our Privacy Policy.</p>
+                
+                <div class="privacy-highlights">
+                    <div class="privacy-highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>We protect your personal information</span>
+                    </div>
+                    <div class="privacy-highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>We comply with Philippine Data Privacy Act</span>
+                    </div>
+                    <div class="privacy-highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>We never sell your data to third parties</span>
+                    </div>
+                </div>
+                
+                <div class="privacy-actions">
+                    <button id="acceptPrivacy" class="btn btn-accept">
+                        <i class="fas fa-check me-2"></i>Accept All
+                    </button>
+                    <button id="declinePrivacy" class="btn btn-decline">
+                        <i class="fas fa-times me-2"></i>Decline
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap 5.3 JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/privacy-modal.js"></script>
     
     <!-- Download Functionality -->
     <script>
         function downloadReport(filename) {
-            // Extract year from filename for dynamic content
-            const year = filename.match(/\d{4}/)?.[0] || '2024';
+            // Create the full path to the file
+            const filePath = `assets/docs/${filename}`;
+            console.log('Attempting to download:', filePath);
             
-            // Create a sample PDF blob with dynamic content
-            const pdfContent = `%PDF-1.4\n1 0 obj\n<<\n/Type /Catalog\n/Pages 2 0 R\n>>\nendobj\n2 0 obj\n<<\n/Type /Pages\n/Kids [3 0 R]\n/Count 1\n>>\nendobj\n3 0 obj\n<<\n/Type /Page\n/Parent 2 0 R\n/MediaBox [0 0 612 792]\n/Contents 4 0 R\n>>\nendobj\n4 0 obj\n<<\n/Length 44\n>>\nstream\nBT\n/F1 24 Tf\n100 700 Td\n(Rural Bank of Digos - Annual Report ${year}) Tj\nET\nendstream\nendobj\nxref\n0 5\n0000000000 65535 f \n0000000009 00000 n \n0000000058 00000 n \n0000000115 00000 n \n0000000205 00000 n \ntrailer\n<<\n/Size 5\n/Root 1 0 R\n>>\nstartxref\n298\n%%EOF`;
-            
-            // Convert to blob
-            const blob = new Blob([pdfContent], { type: 'application/pdf' });
-            
-            // Create download link with docs folder path
-            const url = window.URL.createObjectURL(blob);
+            // Try direct download link first (works better with local files)
             const link = document.createElement('a');
-            link.href = url;
-            link.download = `docs/${filename}`;
+            link.href = filePath;
+            link.download = filename;
+            link.target = '_blank';
             
-            // Show file save dialog by triggering download
-            document.body.appendChild(link);
-            link.click();
+            // Test if file exists by trying to load it
+            const testLink = document.createElement('a');
+            testLink.href = filePath;
             
-            // Clean up
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(url);
+            // Try to access the file
+            fetch(filePath, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok || response.status === 200) {
+                        // File exists, proceed with download
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        showDownloadSuccess(filename);
+                    } else {
+                        throw new Error(`File not accessible: ${response.status}`);
+                    }
+                })
+                .catch(error => {
+                    // If fetch fails (common with file:// protocol), try direct link anyway
+                    console.log('Fetch failed, trying direct link:', error.message);
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    
+                    // Show success message (since we can't reliably detect file existence with file:// protocol)
+                    setTimeout(() => {
+                        showDownloadSuccess(filename);
+                    }, 100);
+                });
+        }
+
+        function showDownloadError(filename) {
+            // Create and show error message
+            const errorAlert = document.createElement('div');
+            errorAlert.className = 'alert alert-danger alert-dismissible fade show position-fixed';
+            errorAlert.style.cssText = 'top: 20px; right: 20px; z-index: 10000; min-width: 300px;';
+            errorAlert.innerHTML = `
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                <strong>Download Failed!</strong> The file "${filename}" was not found.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
             
-            // Show success message
-            showDownloadSuccess(filename);
+            document.body.appendChild(errorAlert);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (errorAlert.parentNode) {
+                    errorAlert.parentNode.removeChild(errorAlert);
+                }
+            }, 5000);
         }
         
         function showDownloadSuccess(filename) {
-            // Extract year from filename for display
-            const year = filename.match(/\d{4}/)?.[0] || 'document';
+            // Determine document type and year from filename
+            const year = filename.match(/\d{4}/)?.[0];
+            let docType = 'document';
+            
+            if (filename.includes('Annual_Report') && year) {
+                docType = `Annual Report ${year}`;
+            } else if (filename.includes('Personal_Loan_Form')) {
+                docType = 'Personal Loan Form';
+            } else if (filename.includes('Business_Loan_Form')) {
+                docType = 'Business Loan Form';
+            } else if (filename.includes('Agricultural_Loan_Form')) {
+                docType = 'Agricultural Loan Form';
+            } else {
+                docType = filename.replace(/\.pdf$/i, '').replace(/_/g, ' ');
+            }
             
             // Create and show a temporary success message
             const successAlert = document.createElement('div');
@@ -427,7 +518,7 @@
             successAlert.style.cssText = 'top: 20px; right: 20px; z-index: 10000; min-width: 300px;';
             successAlert.innerHTML = `
                 <i class="fas fa-check-circle me-2"></i>
-                <strong>Download Started!</strong> Your Annual Report ${year} is being downloaded.
+                <strong>Download Started!</strong> Your ${docType} is being downloaded.
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             `;
             

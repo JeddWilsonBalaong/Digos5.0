@@ -2070,3 +2070,412 @@ body.loaded {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--rbd-primary);
 }
+
+/* About Page Styles */
+.page-header {
+    background: linear-gradient(135deg, var(--rbd-primary) 0%, var(--rbd-secondary) 100%);
+    padding: 8rem 0 4rem;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" /><stop offset="50%" style="stop-color:rgba(255,255,255,0.05);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" /></linearGradient></defs><rect width="100" height="20" fill="url(%23grad)"/></svg>') repeat-x;
+}
+
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255,255,255,0.5);
+}
+
+/* About Section Styles */
+.about-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(30,60,114,0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(42,82,152,0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(40,167,69,0.03) 0%, transparent 50%);
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+}
+
+.about-image .image-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.about-image .image-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(30,60,114,0.1), rgba(42,82,152,0.1));
+    z-index: 1;
+}
+
+.about-stats .stat-item {
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.about-stats .stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Mission & Vision Styles */
+.mission-vision-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.mission-card, .vision-card {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.mission-card:hover, .vision-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.mission-card .card-icon, .vision-card .card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--rbd-primary), var(--rbd-secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.mission-card .card-icon i, .vision-card .card-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.mission-card .card-title, .vision-card .card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--rbd-primary);
+    margin-bottom: 1rem;
+}
+
+.mission-points, .vision-points {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.mission-points li, .vision-points li {
+    padding: 0.5rem 0;
+    font-weight: 500;
+}
+
+.text-accent {
+    color: var(--rbd-accent) !important;
+}
+
+/* Core Values Styles */
+.value-card {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(30,60,114,0.1);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: var(--rbd-primary);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--rbd-accent), var(--rbd-primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.value-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.value-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--rbd-primary);
+    margin-bottom: 1rem;
+}
+
+.value-description {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--rbd-primary), var(--rbd-secondary), var(--rbd-accent));
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    text-align: right;
+    margin-right: 3rem;
+    margin-left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 3rem;
+    margin-right: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--rbd-primary), var(--rbd-secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.timeline-marker i {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.timeline-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    width: calc(50% - 2rem);
+    position: relative;
+}
+
+.timeline-date {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--rbd-accent);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--rbd-primary);
+    margin-bottom: 1rem;
+}
+
+.timeline-description {
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Roadmap Styles */
+.roadmap-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,252,0.95));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(30,60,114,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.roadmap-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rbd-primary), var(--rbd-secondary), var(--rbd-accent));
+}
+
+.roadmap-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.roadmap-year {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--rbd-primary), var(--rbd-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.roadmap-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--rbd-accent), var(--rbd-primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.roadmap-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.roadmap-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--rbd-primary);
+    margin-bottom: 1.5rem;
+}
+
+.roadmap-goals {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.roadmap-goals li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    color: #64748b;
+}
+
+.roadmap-goals li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--rbd-accent);
+    font-size: 0.8rem;
+}
+
+.roadmap-cta {
+    background: linear-gradient(135deg, rgba(30,60,114,0.05), rgba(42,82,152,0.05));
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid rgba(30,60,114,0.1);
+}
+
+.roadmap-cta h3 {
+    color: var(--rbd-primary);
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 6rem 0 3rem;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 4rem);
+        margin-left: 4rem;
+        margin-right: 0;
+        text-align: left !important;
+    }
+    
+    .timeline-marker {
+        left: 30px;
+        transform: translateX(-50%);
+    }
+    
+    .mission-card, .vision-card {
+        margin-bottom: 2rem;
+    }
+    
+    .roadmap-year {
+        font-size: 1.5rem;
+    }
+}
