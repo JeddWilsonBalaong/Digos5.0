@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Rural Bank of Digos</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+    
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/privacy-modal.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-8">
+                        <div class="contact-info d-flex flex-wrap gap-3">
+                            <span><i class="fas fa-phone"></i> +082 553-4641</span>
+                            <span><i class="fas fa-envelope"></i> rbdigos@rbap.org</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Digos - Makar Rd</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg modern-nav">
+            <div class="container">
+                <div class="logo navbar-brand">
+                    <img src="assets/images/old-logo-tagline-white.png" alt="Rural Bank of Digos Logo" class="logo-image">
+                </div>
+
+                <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-line"></span>
+                    <span class="toggler-line"></span>
+                    <span class="toggler-line"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto modern-nav-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-home nav-icon"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link active" href="services.html">
+                                <i class="fas fa-briefcase nav-icon"></i>
+                                <span>Services</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="fas fa-newspaper nav-icon"></i>
+                                <span>News</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#foreclosed">
+                                <i class="fas fa-home nav-icon"></i>
+                                <span>Properties</span>
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="reports.html">
+                                <i class="fas fa-chart-bar nav-icon"></i>
+                                <span>Reports</span>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                <i class="fas fa-info-circle nav-icon"></i>
+                                <span>About</span>
+                            </a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link contact-btn" href="contact.html">
+                                <i class="fas fa-phone nav-icon"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="hero-gradient"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-50">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="service-badge-hero mb-4">
+                            <i class="fas fa-star"></i>
+                            <span>Complete Banking Solutions</span>
+                        </div>
+                        <h1 class="hero-title mb-4">Your Financial Success Starts Here</h1>
+                        <p class="hero-subtitle mb-5">Discover comprehensive banking services designed to empower your financial journey. From personal accounts to business solutions, we're here to help you grow.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="floating-cards">
+                            <div class="floating-card card-1">
+                                <i class="fas fa-piggy-bank"></i>
+                                <span>Savings</span>
+                            </div>
+                            <div class="floating-card card-2">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Checking</span>
+                            </div>
+                            <div class="floating-card card-3">
+                                <i class="fas fa-seedling"></i>
+                                <span>Loans</span>
+                            </div>
+                            <div class="floating-card card-4">
+                                <i class="fas fa-building"></i>
+                                <span>Business</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Grid -->
+    <section class="services-showcase">
+        <div class="container">
+            <!-- Personal Banking Section -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="section-badge">
+                        <i class="fas fa-user"></i>
+                        <span>Personal Banking</span>
+                    </div>
+                    <h2 class="section-title">Personal Banking Services</h2>
+                    <p class="section-subtitle">Tailored financial solutions designed to help you manage, grow, and protect your personal wealth</p>
+                </div>
+            </div>
+            
+            <div class="services-grid">
+                
+                <!-- Personal Banking Services -->
+                <div class="service-item" data-category="personal">
+                    <div class="modern-service-card">
+                        <div class="card-header">
+                            <div class="service-icon-modern personal">
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                            <div class="service-category">
+                                <span class="category-tag personal">Personal Banking</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="service-title">Savings Accounts</h3>
+                            <p class="service-description">Build your wealth with competitive interest rates and flexible savings options tailored for your financial growth.</p>
+                            <div class="service-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-percentage"></i>
+                                    <span>High Interest Rates</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>PDIC Insured</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>ATM Access</span>
+                                </div>
+                            </div>
+                            <div class="service-benefits">
+                                <div class="benefit-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>No maintaining balance for first year</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Free passbook updates</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Monthly statements available</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="service-btn primary">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-category="personal">
+                    <div class="modern-service-card">
+                        <div class="card-header">
+                            <div class="service-icon-modern personal">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="service-category">
+                                <span class="category-tag personal">Personal Banking</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="service-title">Checking Accounts</h3>
+                            <p class="service-description">Manage your daily transactions with ease and convenience through our flexible checking solutions.</p>
+                            <div class="service-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-infinity"></i>
+                                    <span>Unlimited Checks</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-globe"></i>
+                                    <span>Online Banking</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-shield-check"></i>
+                                    <span>Overdraft Protection</span>
+                                </div>
+                            </div>
+                            <div class="service-benefits">
+                                <div class="benefit-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Monthly statements included</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>24/7 account access</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Mobile banking support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="service-btn primary">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-category="personal">
+                    <div class="modern-service-card">
+                        <div class="card-header">
+                            <div class="service-icon-modern personal">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="service-category">
+                                <span class="category-tag personal">Personal Banking</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="service-title">Basic Deposit Accounts</h3>
+                            <p class="service-description">Simple and accessible banking for everyone with no minimum balance requirements.</p>
+                            <div class="service-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-hand-holding"></i>
+                                    <span>No Minimum Balance</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-coins"></i>
+                                    <span>Low Fees</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-user-check"></i>
+                                    <span>Easy Opening</span>
+                                </div>
+                            </div>
+                            <div class="service-benefits">
+                                <div class="benefit-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Basic banking services included</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Ideal for first-time savers</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Financial literacy support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="service-btn primary">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-category="personal">
+                    <div class="modern-service-card">
+                        <div class="card-header">
+                            <div class="service-icon-modern personal">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="service-category">
+                                <span class="category-tag personal">Personal Banking</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="service-title">Time Deposit Accounts</h3>
+                            <p class="service-description">Secure your future with guaranteed returns on fixed-term investments and competitive rates.</p>
+                            <div class="service-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Competitive Rates</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Flexible Terms</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-redo"></i>
+                                    <span>Auto Renewal</span>
+                                </div>
+                            </div>
+                            <div class="service-benefits">
+                                <div class="benefit-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>PDIC insured up to ₱1M</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Multiple term options available</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Guaranteed fixed returns</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="service-btn primary">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Business Banking Section -->
+            <div class="row mb-5 mt-5">
+                <div class="col-12 text-center">
+                    <div class="section-badge">
+                        <i class="fas fa-building"></i>
+                        <span>Business Banking</span>
+                    </div>
+                    <h2 class="section-title">Business Banking Solutions</h2>
+                    <p class="section-subtitle">Comprehensive financial services designed to help your business thrive and expand</p>
+                </div>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Business Banking Services -->
+                <div class="service-item" data-category="business">
+                    <div class="modern-service-card">
+                        <div class="card-header">
+                            <div class="service-icon-modern business">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="service-category">
+                                <span class="category-tag business">Business Banking</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="service-title">Business Accounts</h3>
+                            <p class="service-description">Comprehensive business banking solutions designed for enterprises of all sizes and industries.</p>
+                            <div class="service-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-handshake"></i>
+                                    <span>Merchant Services</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-money-check-alt"></i>
+                                    <span>Cash Management</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Payroll Services</span>
+                                </div>
+                            </div>
+                            <div class="service-benefits">
+                                <div class="benefit-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Business checking accounts</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Dedicated business support</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Corporate banking services</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="service-btn business">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Loan Services Section -->
+            <div class="row mb-5 mt-5">
+                <div class="col-12 text-center">
+                    <div class="section-badge">
+                        <i class="fas fa-seedling"></i>
+                        <span>Loan Services</span>
+                    </div>
+                    <h2 class="section-title">Loan & Financing Solutions</h2>
+                    <p class="section-subtitle">Flexible financing options to help you achieve your personal and business goals</p>
+                </div>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Loan Services -->
+                <div class="service-item" data-category="loans">
+                    <div class="modern-service-card">
+                        <div class="card-header">
+                            <div class="service-icon-modern loans">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div class="service-category">
+                                <span class="category-tag loans">Loan Services</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="service-title">Agriculture Loans</h3>
+                            <p class="service-description">Specialized financing solutions designed for farmers and agricultural businesses to grow and prosper.</p>
+                            <div class="service-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-tractor"></i>
+                                    <span>Equipment Finance</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>Crop Production</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>Flexible Terms</span>
+                                </div>
+                            </div>
+                            <div class="service-benefits">
+                                <div class="benefit-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Livestock financing available</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Seasonal payment options</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Agricultural expert support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="service-btn loans">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-category="loans">
+                    <div class="modern-service-card">
+                        <div class="card-header">
+                            <div class="service-icon-modern loans">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="service-category">
+                                <span class="category-tag loans">Loan Services</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="service-title">Commercial Loans</h3>
+                            <p class="service-description">Business expansion and working capital loans for commercial enterprises seeking growth opportunities.</p>
+                            <div class="service-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>Working Capital</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                    <span>Business Expansion</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-percentage"></i>
+                                    <span>Competitive Rates</span>
+                                </div>
+                            </div>
+                            <div class="service-benefits">
+                                <div class="benefit-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Equipment financing options</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Fast approval process</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Business advisory support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="service-btn loans">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-category="loans">
+                    <div class="modern-service-card">
+                        <div class="card-header">
+                            <div class="service-icon-modern loans">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="service-category">
+                                <span class="category-tag loans">Loan Services</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="service-title">Microfinance Loans</h3>
+                            <p class="service-description">Small loans designed for micro-entrepreneurs and small business owners to start and grow their ventures.</p>
+                            <div class="service-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-rocket"></i>
+                                    <span>Quick Approval</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-handshake"></i>
+                                    <span>No Collateral</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Financial Training</span>
+                                </div>
+                            </div>
+                            <div class="service-benefits">
+                                <div class="benefit-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Flexible payment schedules</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Financial literacy programs</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Community support network</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="service-btn loans">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-category="loans">
+                    <div class="modern-service-card">
+                        <div class="card-header">
+                            <div class="service-icon-modern loans">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="service-category">
+                                <span class="category-tag loans">Loan Services</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="service-title">Personal Loans</h3>
+                            <p class="service-description">Personal financing solutions tailored to meet your individual needs and help achieve your personal goals.</p>
+                            <div class="service-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Home Improvement</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>Education Loans</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Quick Processing</span>
+                                </div>
+                            </div>
+                            <div class="service-benefits">
+                                <div class="benefit-list">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Emergency loan options</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Competitive interest rates</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Personalized loan terms</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="service-btn loans">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h4 class="mb-3">Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="index.html" class="text-decoration-none">Home</a></li>
+                            <!-- <li class="mb-2"><a href="services.html" class="text-decoration-none">Services</a></li>
+                            <li class="mb-2"><a href="news.html" class="text-decoration-none">News</a></li>
+                            <li class="mb-2"><a href="#foreclosed" class="text-decoration-none">Properties</a></li> -->
+                            <li class="mb-2"><a href="reports.html" class="text-decoration-none">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h4 class="mb-3">Services</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Savings Account</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Checking Account</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Basic Deposit Account</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Time Deposit Account</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none">Loan Account</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h4 class="mb-3">Connect With Us</h4>
+                        <p>Stay updated with the latest financial news and services.</p>
+                        <div class="social-icons d-flex gap-2 mt-3">
+                            <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom border-top pt-3 text-center">
+                <p class="mb-0">&copy; 2025 RBDI. All rights reserved. | <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a> | Terms of Service | PDIC Insured</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Acceptance Dialog -->
+    <div id="privacyModal" class="privacy-modal">
+        <div class="privacy-modal-content">
+            <div class="privacy-modal-header">
+                <div class="privacy-icon">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <h3>Privacy Policy & Cookie Notice</h3>
+                <p class="privacy-subtitle">Your privacy matters to us</p>
+            </div>
+            
+            <div class="privacy-modal-body">
+                <p>We use cookies and similar technologies to enhance your browsing experience, provide personalized content, and analyze our traffic. By continuing to use our website, you consent to our use of cookies and agree to our <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.</p>
+                
+                <div class="privacy-highlights">
+                    <div class="privacy-highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>We protect your personal information</span>
+                    </div>
+                    <div class="privacy-highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>We comply with Philippine Data Privacy Act</span>
+                    </div>
+                    <div class="privacy-highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>We never sell your data to third parties</span>
+                    </div>
+                </div>
+                
+                <div class="privacy-actions">
+                    <button id="acceptPrivacy" class="btn btn-accept">
+                        <i class="fas fa-check me-2"></i>Accept All
+                    </button>
+                    <button id="declinePrivacy" class="btn btn-decline">
+                        <i class="fas fa-times me-2"></i>Decline
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/privacy-modal.js"></script>
+    
+    <script>
+        // Modern service filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-btn');
+            const serviceItems = document.querySelectorAll('.service-item');
+            
+            // Initialize animation
+            setTimeout(() => {
+                serviceItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, index * 100);
+                });
+            }, 200);
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Animate out all items first
+                    serviceItems.forEach((item, index) => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            // Show matching items
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0) scale(1)';
+                            }, index * 50);
+                        } else {
+                            // Hide non-matching items
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(30px) scale(0.95)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Smooth scroll for CTA buttons
+            const ctaButtons = document.querySelectorAll('.service-btn');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    if (!this.onclick) { // Only if it's not a download button
+                        e.preventDefault();
+                        // Add ripple effect
+                        const ripple = document.createElement('span');
+                        ripple.classList.add('ripple');
+                        this.appendChild(ripple);
+                        
+                        setTimeout(() => {
+                            ripple.remove();
+                        }, 600);
+                    }
+                });
+            });
+        });
+        
+        // Add ripple effect CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            .service-btn {
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple-animation 0.6s linear;
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+            
+            @keyframes ripple-animation {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>
