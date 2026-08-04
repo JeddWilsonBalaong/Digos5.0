@@ -89,4 +89,59 @@
     };
     search.addEventListener("input", run);
   }
+
+  /* ---- Home: featured stories carousel ---- */
+  var carousel = document.querySelector("[data-carousel]");
+  if (carousel) {
+    var cSlides = carousel.querySelectorAll("[data-carousel-slide]");
+    var cDots = carousel.querySelectorAll("[data-carousel-dot]");
+    var cPrev = carousel.querySelector("[data-carousel-prev]");
+    var cNext = carousel.querySelector("[data-carousel-next]");
+    var cCurrent = 0;
+    var cTimer = null;
+    var C_AUTOPLAY_MS = 6000;
+    var cReduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    var carouselGoTo = function (index) {
+      var next = (index + cSlides.length) % cSlides.length;
+      Array.prototype.forEach.call(cSlides, function (slide, i) {
+        var on = i === next;
+        slide.classList.toggle("is-active", on);
+        slide.setAttribute("aria-hidden", on ? "false" : "true");
+        var cta = slide.querySelector(".btn");
+        if (cta) cta.tabIndex = on ? 0 : -1;
+      });
+      Array.prototype.forEach.call(cDots, function (dot, i) {
+        var on = i === next;
+        dot.classList.toggle("is-active", on);
+        dot.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      cCurrent = next;
+    };
+
+    var carouselStop = function () {
+      if (cTimer) { window.clearInterval(cTimer); cTimer = null; }
+    };
+    var carouselPlay = function () {
+      if (cReduceMotion) return;
+      carouselStop();
+      cTimer = window.setInterval(function () { carouselGoTo(cCurrent + 1); }, C_AUTOPLAY_MS);
+    };
+
+    if (cPrev) cPrev.addEventListener("click", function () { carouselGoTo(cCurrent - 1); carouselPlay(); });
+    if (cNext) cNext.addEventListener("click", function () { carouselGoTo(cCurrent + 1); carouselPlay(); });
+    Array.prototype.forEach.call(cDots, function (dot, i) {
+      dot.addEventListener("click", function () { carouselGoTo(i); carouselPlay(); });
+    });
+
+    carousel.addEventListener("mouseenter", carouselStop);
+    carousel.addEventListener("mouseleave", carouselPlay);
+    carousel.addEventListener("focusin", carouselStop);
+    carousel.addEventListener("focusout", function (e) {
+      if (!carousel.contains(e.relatedTarget)) carouselPlay();
+    });
+
+    carouselGoTo(0);
+    carouselPlay();
+  }
 })();

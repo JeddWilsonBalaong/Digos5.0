@@ -51,7 +51,146 @@
     </header>
     <main id="home">
 
-        <section class="hero">
+        <section class="carousel" id="home-carousel" role="region" aria-roledescription="carousel"
+            aria-label="Featured stories" data-carousel>
+            <img class="carousel__brandmark" src="assets/images/logo-mark-white.png" alt="" aria-hidden="true">
+
+            <figure class="carousel__slide is-active" data-carousel-slide aria-hidden="false">
+                <span class="carousel__photo"
+                    style="background-image:url('assets/images/carousel/01-savings.jpg')"></span>
+                <span class="carousel__scrim"></span>
+                <div class="wrap carousel__wrap">
+                    <div class="carousel__body">
+                        <span class="eyebrow"><i class="fa-solid fa-mobile-screen"
+                                aria-hidden="true"></i>Everyday banking</span>
+                        <h2 class="carousel__title">Bank on your schedule, not ours</h2>
+                        <p class="carousel__lead">Check balances, move money and manage your account from wherever
+                            work takes you.</p>
+                        <div class="btn-row">
+                            <a class="btn btn--on-brand btn--lg" href="services.html"><span>See everyday
+                                    accounts</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+
+            <figure class="carousel__slide" data-carousel-slide aria-hidden="true">
+                <span class="carousel__photo"
+                    style="background-image:url('assets/images/carousel/02-micro.jpg')"></span>
+                <span class="carousel__scrim"></span>
+                <div class="wrap carousel__wrap">
+                    <div class="carousel__body">
+                        <span class="eyebrow"><i class="fa-solid fa-wheat-awn"
+                                aria-hidden="true"></i>Agricultural loans</span>
+                        <h2 class="carousel__title">Financing planted where the harvest is</h2>
+                        <p class="carousel__lead">Seasonal and term loans for farmers across Davao del Sur, Davao
+                            Occidental and North Cotabato — decided by people who know the land.</p>
+                        <div class="btn-row">
+                            <a class="btn btn--on-brand btn--lg" href="services.html"><span>See agri loan
+                                    options</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+
+            <figure class="carousel__slide" data-carousel-slide aria-hidden="true">
+                <span class="carousel__photo"
+                    style="background-image:url('assets/images/carousel/03-pension.jpg')"></span>
+                <span class="carousel__scrim"></span>
+                <div class="wrap carousel__wrap">
+                    <div class="carousel__body">
+                        <span class="eyebrow"><i class="fa-solid fa-user-clock"
+                                aria-hidden="true"></i>Pension &amp; senior deposits</span>
+                        <h2 class="carousel__title">A bank that's still here after seven decades</h2>
+                        <p class="carousel__lead">Simple, secure deposit accounts for members who've trusted us since
+                            1956.</p>
+                        <div class="btn-row">
+                            <a class="btn btn--on-brand btn--lg" href="services.html"><span>See deposit
+                                    accounts</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+
+            <figure class="carousel__slide" data-carousel-slide aria-hidden="true">
+                <span class="carousel__photo"
+                    style="background-image:url('assets/images/carousel/04-basic.jpg')"></span>
+                <span class="carousel__scrim"></span>
+                <div class="wrap carousel__wrap">
+                    <div class="carousel__body">
+                        <span class="eyebrow"><i class="fa-solid fa-people-roof"
+                                aria-hidden="true"></i>Family &amp; community savings</span>
+                        <h2 class="carousel__title">Saving today for the family growing up around you</h2>
+                        <p class="carousel__lead">Start a savings account for &#8369;100 and build toward what your
+                            family needs next.</p>
+                        <div class="btn-row">
+                            <a class="btn btn--on-brand btn--lg" href="services.html"><span>Open a savings
+                                    account</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+
+            <figure class="carousel__slide" data-carousel-slide aria-hidden="true">
+                <span class="carousel__photo"
+                    style="background-image:url('assets/images/carousel/05-time.jpg')"></span>
+                <span class="carousel__scrim"></span>
+                <div class="wrap carousel__wrap">
+                    <div class="carousel__body">
+                        <span class="eyebrow"><i class="fa-solid fa-seedling"
+                                aria-hidden="true"></i>Grow your savings</span>
+                        <h2 class="carousel__title">Small deposits, given time to grow</h2>
+                        <p class="carousel__lead">Time deposits and regular savings insured by PDIC up to
+                            &#8369;1,000,000.</p>
+                        <div class="btn-row">
+                            <a class="btn btn--on-brand btn--lg" href="services.html"><span>Compare savings
+                                    options</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+
+            <figure class="carousel__slide" data-carousel-slide aria-hidden="true">
+                <span class="carousel__photo"
+                    style="background-image:url('assets/images/carousel/06-current.jpg')"></span>
+                <span class="carousel__scrim"></span>
+                <div class="wrap carousel__wrap">
+                    <div class="carousel__body">
+                        <span class="eyebrow"><i class="fa-solid fa-briefcase"
+                                aria-hidden="true"></i>Business &amp; commercial loans</span>
+                        <h2 class="carousel__title">Capital decided fairly, close to home</h2>
+                        <p class="carousel__lead">Loans for local businesses, weighed on their merits by officers
+                            based right in your province.</p>
+                        <div class="btn-row">
+                            <a class="btn btn--on-brand btn--lg" href="branches.html"><span>Talk to a loan
+                                    officer</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+
+            <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Previous slide"
+                data-carousel-prev><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+            <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Next slide"
+                data-carousel-next><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+
+            <div class="carousel__dots" role="tablist" aria-label="Slides" data-carousel-dots>
+                <button class="carousel__dot is-active" type="button" role="tab" aria-selected="true"
+                    aria-label="Slide 1: Everyday banking" data-carousel-dot></button>
+                <button class="carousel__dot" type="button" role="tab" aria-selected="false"
+                    aria-label="Slide 2: Agricultural loans" data-carousel-dot></button>
+                <button class="carousel__dot" type="button" role="tab" aria-selected="false"
+                    aria-label="Slide 3: Pension &amp; senior deposits" data-carousel-dot></button>
+                <button class="carousel__dot" type="button" role="tab" aria-selected="false"
+                    aria-label="Slide 4: Family &amp; community savings" data-carousel-dot></button>
+                <button class="carousel__dot" type="button" role="tab" aria-selected="false"
+                    aria-label="Slide 5: Grow your savings" data-carousel-dot></button>
+                <button class="carousel__dot" type="button" role="tab" aria-selected="false"
+                    aria-label="Slide 6: Business &amp; commercial loans" data-carousel-dot></button>
+            </div>
+        </section>
+
+        <!-- <section class="hero">
             <img class="hero__mark" src="assets/images/logo-mark-white.png" alt="" aria-hidden="true">
             <div class="wrap">
                 <div class="hero__grid">
@@ -107,7 +246,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="section">
             <div class="wrap">
@@ -143,9 +282,33 @@
             </div>
         </section>
 
-        <section class="section section--brand section--tight">
+        <section class="section section--brand anniv" id="anniversary">
+            <span class="anniv__numeral" aria-hidden="true">70</span>
             <div class="wrap">
-                <div class="grid grid--4">
+                <div class="anniv__grid">
+                    <!-- <div class="anniv__copy">
+                        <span class="eyebrow"><i class="fa-solid fa-cake-candles" aria-hidden="true"></i>1956 &ndash;
+                            2026</span>
+                        <h2 class="sec-title">Still the bank down the road, seven decades on</h2>
+                        <p class="sec-sub">Seven decades ago, a handful of Digos families pooled their savings so
+                            farmers could borrow without leaving town. That same bank now serves three provinces &mdash;
+                            still locally owned, still deciding your loan in the office you walk into.</p>
+                        <div class="btn-row">
+                            <a class="btn btn--on-brand btn--lg" href="#"><span>Read our story</span><i
+                                    class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            <a class="btn btn--outline-on-brand btn--lg" href="branches.html"><i
+                                    class="fa-solid fa-building-columns" aria-hidden="true"></i><span>Visit an
+                                    office</span></a>
+                        </div>
+                    </div> -->
+                    <figure class="anniv__media">
+                        <video class="anniv__video" src="assets/video/rbdigos-70th.mp4" autoplay muted loop playsinline
+                            preload="metadata"></video>
+                        <!-- <figcaption class="anniv__caption"><i class="fa-solid fa-film" aria-hidden="true"></i>Our 70th
+                            anniversary film</figcaption> -->
+                    </figure>
+                </div>
+                <div class="anniv__stats">
                     <div class="stat"><span class="stat__value">70</span><span class="stat__label">Years of
                             service</span><span class="stat__note">Established 1956</span></div>
                     <div class="stat"><span class="stat__value">5</span><span class="stat__label">Full
@@ -194,7 +357,7 @@
             </div>
         </section>
 
-        <!-- <section class="section" id="advisories">
+     <section class="section" id="advisories">
             <div class="wrap">
                 <div class="sec-head">
                     <span class="eyebrow"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i>Advisories</span>
@@ -202,7 +365,7 @@
                 </div>
                 <div class="split split--wide-left">
                     <div class="stack" style="gap:12px">
-                        <article class="notice">
+                        <!-- <article class="notice">
                             <div class="notice__meta"><span class="tag tag--urgent">Security</span><span
                                     class="notice__date">18 Jul 2026</span></div>
                             <div>
@@ -210,16 +373,24 @@
                                 <p class="notice__summary">We never ask for your OTP, PIN or password. Report suspicious
                                     messages to your branch.</p>
                             </div>
-                        </article>
+                        </article> -->
+                        <article class="notice">
+                            <div class="notice__meta"><span class="tag tag--notice">Announcement</span><span
+                                    class="notice__date">07 Aug 2026</span></div>
+                            <div>
+                                <h3 class="notice__title">Client Appreciation Day</h3>
+                                <p class="notice__summary">Don Marcelino branch will host its main anniversary celebration and Client Appreciation Day on Friday, August 7, 2026, allowing visiting clients to join in the festivities during regular weekday operating hours.</p>
+                            </div>
+                        </article>                        
                         <article class="notice">
                             <div class="notice__meta"><span class="tag tag--notice">Advisory</span><span
-                                    class="notice__date">02 Jul 2026</span></div>
+                                    class="notice__date">04 Aug 2026</span></div>
                             <div>
                                 <h3 class="notice__title">Holiday banking schedule — August 2026</h3>
                                 <p class="notice__summary">All offices are closed on 21 and 31 August 2026.</p>
                             </div>
                         </article>
-                        <article class="notice">
+                        <!-- <article class="notice">
                             <div class="notice__meta"><span class="tag tag--notice">Service</span><span
                                     class="notice__date">24 Jun 2026</span></div>
                             <div>
@@ -234,17 +405,17 @@
                                 <h3 class="notice__title">Time deposit rates updated</h3>
                                 <p class="notice__summary">New rates apply to placements made from 01 June 2026.</p>
                             </div>
-                        </article>
+                        </article> -->
                     </div>
                     <div class="stack">
-                        <div class="alert alert--danger">
+                        <!-- <div class="alert alert--danger">
                             <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
                             <div>
                                 <h3 class="alert__title">RBDigos will never ask for your OTP</h3>
                                 <p class="alert__body">Not by SMS, not by email, not by phone. If someone does, hang up
                                     and call your branch on the number printed on this site.</p>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="card card--sunken">
                             <h3 class="card-title">Consumer assistance</h3>
                             <p class="card-text">Unresolved concern? Contact us at <strong>+082 553-4641</strong> or
@@ -254,7 +425,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
     </main>
 
