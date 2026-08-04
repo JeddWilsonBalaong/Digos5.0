@@ -2,459 +2,342 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rural Bank of Digos - Trusted Banking Solutions</title>
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
-    <link href="assets/css/privacy-modal.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rural Bank of Digos — The Pioneer Bank since 1956</title>
+    <meta name="description"
+        content="Deposits, agri and business loans across Davao del Sur, Davao Occidental and North Cotabato. BSP supervised, PDIC insured.">
+    <link rel="icon" href="assets/img/logo-mark-navy.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-8">
-                        <div class="contact-info d-flex flex-wrap gap-3">
-                            <span><i class="fas fa-phone"></i> +082 553-4641</span>
-                            <span><i class="fas fa-envelope"></i> rbdigos@rbap.org</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Digos - Makar Rd</span>
+
+    <header class="site-header">
+        <div class="utilbar">
+            <div class="wrap">
+                <span><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+0825534641"
+                        style="color:inherit">+082 553-4641</a></span>
+                <span><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:rbdigos@rbap.org"
+                        style="color:inherit">rbdigos@rbap.org</a></span>
+                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rizal Ave, Digos City</span>
+                <span class="utilbar__pdic"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Deposits insured
+                    by PDIC up to &#8369;1,000,000</span>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="wrap">
+                <a class="logo" href="index.html"><img src="assets/images/logo-navy.png" alt="Rural Bank of Digos"></a>
+                <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><i
+                        class="fa-solid fa-bars" aria-hidden="true"></i></button>
+                <nav class="nav" aria-label="Main">
+                    <a class="nav-link is-active" href="index.html" aria-current="page"><i class="fa-solid fa-house"
+                            aria-hidden="true"></i><span>Home</span></a>
+                    <a class="nav-link" href="services.html"><i class="fa-solid fa-briefcase"
+                            aria-hidden="true"></i><span>Services</span></a>
+                    <a class="nav-link" href="branches.html"><i class="fa-solid fa-building-columns"
+                            aria-hidden="true"></i><span>Branches</span></a>
+                    <a class="nav-link" href="reports.html"><i class="fa-solid fa-chart-column"
+                            aria-hidden="true"></i><span>Reports</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="home">
+
+        <section class="hero">
+            <img class="hero__mark" src="assets/images/logo-mark-white.png" alt="" aria-hidden="true">
+            <div class="wrap">
+                <div class="hero__grid">
+                    <div class="hero__copy">
+                        <span class="badge badge--on-brand"><i class="fa-solid fa-shield-halved"
+                                aria-hidden="true"></i>Serving Davao since 1956</span>
+                        <h1 class="hero__title">The bank that knows the community and people</h1>
+                        <p class="hero__lead">Deposits, agri and business loans across Davao del Sur, Davao Occidental
+                            and North Cotabato — decided locally, by people you can walk in and talk to.</p>
+                        <div class="btn-row">
+                            <a class="btn btn--on-brand btn--lg" href="services.html"><span>Explore our
+                                    products</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            <a class="btn btn--outline-on-brand btn--lg" href="branches.html"><i
+                                    class="fa-solid fa-building-columns" aria-hidden="true"></i><span>Find an
+                                    office</span></a>
+                        </div>
+                        <div class="hero__checks">
+                            <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i>BSP supervised</span>
+                            <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i>PDIC insured to
+                                &#8369;1,000,000</span>
+                            <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i>RBAP member</span>
+                        </div>
+                    </div>
+                    <div class="hero__card">
+                        <h2>Find the right account</h2>
+                        <p>Answer two questions and we'll point you to the product and the nearest office.</p>
+                        <form class="stack" action="services.html" method="get">
+                            <div class="field">
+                                <label class="field-label" for="want">I want to</label>
+                                <div class="control"><select class="select" id="want" name="want">
+                                        <option>Save money</option>
+                                        <option>Deposit for a fixed term</option>
+                                        <option>Borrow for my farm</option>
+                                        <option>Borrow for my business</option>
+                                    </select></div>
+                            </div>
+                            <div class="field">
+                                <label class="field-label" for="near">Nearest office</label>
+                                <div class="control"><select class="select" id="near" name="near">
+                                        <option>Digos — Main</option>
+                                        <option>Bansalan</option>
+                                        <option>Kidapawan</option>
+                                        <option>Malita</option>
+                                        <option>Antipas</option>
+                                        <option>Kapatagan</option>
+                                        <option>Mlang</option>
+                                    </select></div>
+                            </div>
+                            <button class="btn btn--primary btn--block" type="submit"><span>Show me the options</span><i
+                                    class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                            <span class="hint">We never ask for account numbers, PINs or OTPs on this website.</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-star" aria-hidden="true"></i>Our services</span>
+                    <h2 class="sec-title">Two ways we help</h2>
+                </div>
+                <div class="tiles">
+                    <a class="tile" href="services.html">
+                        <!-- Replace the background image below with a real photo in assets/images/ -->
+                        <span class="tile__photo" style="background-image:url('assets/images/home-save.jpg')"></span>
+                        <span class="tile__scrim"></span>
+                        <span class="tile__body">
+                            <i class="fa-solid fa-piggy-bank" aria-hidden="true"></i>
+                            <span class="tile__title">Save</span>
+                            <span class="tile__line">Deposits from &#8369;100, insured by PDIC.</span>
+                            <span class="tile__cta"><span>See the options</span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </span>
+                    </a>
+                    <a class="tile" href="services.html">
+                        <span class="tile__photo" style="background-image:url('assets/images/home-borrow.jpg')"></span>
+                        <span class="tile__scrim"></span>
+                        <span class="tile__body">
+                            <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
+                            <span class="tile__title">Borrow</span>
+                            <span class="tile__line">Farm, business and personal loans decided here.</span>
+                            <span class="tile__cta"><span>See the options</span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--brand section--tight">
+            <div class="wrap">
+                <div class="grid grid--4">
+                    <div class="stat"><span class="stat__value">69</span><span class="stat__label">Years of
+                            service</span><span class="stat__note">Established 1956</span></div>
+                    <div class="stat"><span class="stat__value">5</span><span class="stat__label">Full
+                            branches</span><span class="stat__note">Davao &amp; North Cotabato</span></div>
+                    <div class="stat"><span class="stat__value">6</span><span class="stat__label">Satellite
+                            offices</span><span class="stat__note">As of Aug 2026</span></div>
+                    <div class="stat"><span class="stat__value">&#8369;1M</span><span class="stat__label">PDIC
+                            cover</span><span class="stat__note">Per depositor</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--subtle">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-award" aria-hidden="true"></i>Our credentials</span>
+                    <h2 class="sec-title">Regulated, insured, accountable</h2>
+                    <p class="sec-sub">Every claim on this page is verifiable with the regulator named beside it.</p>
+                </div>
+                <div class="grid grid--4">
+                    <div class="cred"><span class="cred__icon"><i class="fa-solid fa-shield-halved"
+                                aria-hidden="true"></i></span>
+                        <h3 class="cred__title">BSP supervised</h3>
+                        <p class="cred__desc">Regulated and examined by the Bangko Sentral ng Pilipinas.</p><span
+                            class="badge badge--soft">Rural bank licence</span>
+                    </div>
+                    <div class="cred"><span class="cred__icon"><i class="fa-solid fa-building-columns"
+                                aria-hidden="true"></i></span>
+                        <h3 class="cred__title">PDIC insured</h3>
+                        <p class="cred__desc">Deposits are insured by the Philippine Deposit Insurance Corporation.</p>
+                        <span class="badge badge--soft">Up to &#8369;1,000,000</span>
+                    </div>
+                    <div class="cred"><span class="cred__icon"><i class="fa-solid fa-handshake"
+                                aria-hidden="true"></i></span>
+                        <h3 class="cred__title">RBAP member</h3>
+                        <p class="cred__desc">Member of the Rural Bankers Association of the Philippines.</p><span
+                            class="badge badge--soft">Since 1956</span>
+                    </div>
+                    <div class="cred"><span class="cred__icon"><i class="fa-solid fa-lock"
+                                aria-hidden="true"></i></span>
+                        <h3 class="cred__title">Data Privacy Act</h3>
+                        <p class="cred__desc">Registered processing and a named Data Protection Officer.</p><span
+                            class="badge badge--soft">RA 10173 compliant</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="advisories">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i>Advisories</span>
+                    <h2 class="sec-title">What customers need to know this month</h2>
+                </div>
+                <div class="split split--wide-left">
+                    <div class="stack" style="gap:12px">
+                        <article class="notice">
+                            <div class="notice__meta"><span class="tag tag--urgent">Security</span><span
+                                    class="notice__date">18 Jul 2026</span></div>
+                            <div>
+                                <h3 class="notice__title">Phishing SMS using the RBDigos name</h3>
+                                <p class="notice__summary">We never ask for your OTP, PIN or password. Report suspicious
+                                    messages to your branch.</p>
+                            </div>
+                        </article>
+                        <article class="notice">
+                            <div class="notice__meta"><span class="tag tag--notice">Advisory</span><span
+                                    class="notice__date">02 Jul 2026</span></div>
+                            <div>
+                                <h3 class="notice__title">Holiday banking schedule — August 2026</h3>
+                                <p class="notice__summary">All offices are closed on 21 and 31 August 2026.</p>
+                            </div>
+                        </article>
+                        <article class="notice">
+                            <div class="notice__meta"><span class="tag tag--notice">Service</span><span
+                                    class="notice__date">24 Jun 2026</span></div>
+                            <div>
+                                <h3 class="notice__title">Core system maintenance, 28 June, 10 PM – 2 AM</h3>
+                                <p class="notice__summary">Over-the-counter services are unaffected.</p>
+                            </div>
+                        </article>
+                        <article class="notice">
+                            <div class="notice__meta"><span class="tag tag--rates">Rates</span><span
+                                    class="notice__date">01 Jun 2026</span></div>
+                            <div>
+                                <h3 class="notice__title">Time deposit rates updated</h3>
+                                <p class="notice__summary">New rates apply to placements made from 01 June 2026.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="stack">
+                        <div class="alert alert--danger">
+                            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3 class="alert__title">RBDigos will never ask for your OTP</h3>
+                                <p class="alert__body">Not by SMS, not by email, not by phone. If someone does, hang up
+                                    and call your branch on the number printed on this site.</p>
+                            </div>
+                        </div>
+                        <div class="card card--sunken">
+                            <h3 class="card-title">Consumer assistance</h3>
+                            <p class="card-text">Unresolved concern? Contact us at <strong>+082 553-4641</strong> or
+                                <strong>rbdigos@rbap.org</strong>. You may also reach BSP Consumer Affairs at (02)
+                                8708-7087.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <nav class="navbar navbar-expand-lg modern-nav">
-            <div class="container">
-                <div class="logo navbar-brand">
-                     <img src="assets/images/old-logo-tagline-white.png" alt="Rural Bank of Digos Logo" class="logo-image">
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="assets/images/logo-white.png" alt="Rural Bank of Digos">
+                    <p class="footer__blurb">Rural Bank of Digos, Inc. has served Davao del Sur, Davao Occidental and
+                        North Cotabato since 1956.</p>
+                    <div><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                                aria-hidden="true"></i></a></div>
                 </div>
-
-                <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="toggler-line"></span>
-                    <span class="toggler-line"></span>
-                    <span class="toggler-line"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto modern-nav-menu">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#home">
-                                <i class="fas fa-home nav-icon"></i>
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item dropdown-hover">
-                            <a class="nav-link" href="#products">
-                                <i class="fas fa-briefcase nav-icon"></i>
-                                <span>Services</span>
-                                <i class="fas fa-chevron-down dropdown-arrow"></i>
-                            </a>
-                            <div class="mega-dropdown">
-                                <div class="dropdown-grid">
-                                    <div class="dropdown-column">
-                                        <h6>Personal Banking</h6>
-                                        <a href="#">Savings Accounts</a>
-                                        <a href="#">Checking Accounts</a>
-                                        <a href="#">Basic Deposit Accounts</a>
-                                        <a href="#">Time Deposit Accounts</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h6>Business Solutions</h6>
-                                        <a href="#">Loan Accounts</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h6>Download Forms Now!</h6>
-                                        <a href="#">Savings Accounts Form</a>
-                                        <a href="#">Time Deposit Form</a>
-                                        <a href="#">Loan Application Form</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-newspaper nav-icon"></i>
-                                <span>News</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#foreclosed">
-                                <i class="fas fa-home nav-icon"></i>
-                                <span>Properties</span>
-                            </a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="reports.html">
-                                <i class="fas fa-chart-bar nav-icon"></i>
-                                <span>Reports</span>
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-info-circle nav-icon"></i>
-                                <span>About</span>
-                            </a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="branches.html">
-                                <i class="fas fa-building nav-icon"></i>
-                                <span>Branches</span>
-                            </a>
-                        </li>                        
-                        <!-- <li class="nav-item">
-                            <a class="nav-link contact-btn" href="contact.html">
-                                <i class="fas fa-phone nav-icon"></i>
-                                <span>Contact</span>
-                            </a>
-                        </li> -->
+                <div class="footer__col">
+                    <h2>Bank with us</h2>
+                    <ul>
+                        <li><a href="services.html">Savings account</a></li>
+                        <li><a href="services.html">Checking account</a></li>
+                        <li><a href="services.html">Basic deposit account</a></li>
+                        <li><a href="services.html">Time deposit</a></li>
+                        <li><a href="services.html">Loan accounts</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="footer__col">
+                    <h2>About RBDigos</h2>
+                    <ul>
+                        <li><a href="#">Our story</a></li>
+                        <li><a href="#">Board &amp; management</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="index.html#advisories">News &amp; advisories</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer__col">
+                    <h2>Transparency</h2>
+                    <ul>
+                        <li><a href="reports.html">Annual reports</a></li>
+                        <li><a href="reports.html">Balance sheets</a></li>
+                        <li><a href="reports.html">Forms &amp; documents</a></li>
+                        <li><a href="privacy-policy.html">Privacy notice</a></li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8">
-                    <h2 class="display-4 mb-4">Your Trusted Financial Partner</h2>
-                    <p class="lead mb-4">Building strong financial foundations with personalized banking solutions, expert
-                    investment guidance, and comprehensive financial services designed for your success.</p>
-                    <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="#products" class="btn btn-primary btn-lg">
-                            <i class="fas fa-arrow-right me-2"></i>
-                            Explore Services
-                        </a>
-                        <a href="contact.html" class="btn btn-outline-light btn-lg">
-                            <i class="fas fa-phone me-2"></i>
-                            Get in Touch
-                        </a>
-                    </div>
-                </div>
+            <div class="footer__legal">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                <p>Rural Bank of Digos, Inc. is regulated by the Bangko Sentral ng Pilipinas. Deposits are insured by
+                    the PDIC up to &#8369;1,000,000 per depositor. For concerns, contact us at <strong>+082
+                        553-4641</strong> or <strong>rbdigos@rbap.org</strong>. BSP Consumer Assistance: (02) 8708-7087,
+                    consumeraffairs@bsp.gov.ph.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features py-5" id="products">
-        <div class="container-fluid px-4">
-            <!-- Section Header -->
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <div class="section-badge">
-                        <i class="fas fa-star"></i>
-                        <span>Our Services</span>
-                    </div>
-                    <h2 class="section-title">Financial Solutions for Every Need</h2>
-                    <p class="section-subtitle">Discover our comprehensive range of banking services designed to help you achieve your financial goals</p>
-                </div>
-            </div>
-
-            <!-- Features Grid -->
-            <div class="features-grid">
-                <div class="feature-item" data-aos="fade-up" data-aos-delay="0">
-                    <div class="feature-content">
-                        <div class="feature-icon-modern">
-                            <div class="icon-bg"></div>
-                            <i class="fas fa-piggy-bank"></i>
-                        </div>
-                        <div class="feature-info">
-                            <h4>Personal Banking</h4>
-                            <p>Complete personal banking services including checking accounts, savings accounts, time deposit, and personal loans with competitive rates.</p>
-                            <div class="feature-highlights">
-                                <span>• Savings Accounts</span>
-                                <span>• Checking Accounts</span>
-                                <span>• Basic Deposit Accounts</span>
-                                <span>• Time Deposit Accounts</span>
-                            </div>
-                            <a href="#" class="feature-link">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-content">
-                        <div class="feature-icon-modern">
-                            <div class="icon-bg"></div>
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <div class="feature-info">
-                            <h4>Business Banking</h4>
-                            <p>Comprehensive business banking solutions including commercial loans, merchant services, and cash management for businesses of all sizes.</p>
-                            <div class="feature-highlights">
-                                <span>• Agriculture Loans</span>
-                                <span>• Commercial Loans</span>
-                                <span>• Microfinance Loans</span>
-                                <span>• Other Loans</span>
-                            </div>
-                            <a href="#" class="feature-link">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats py-5">
-        <div class="container">
-            <div class="row g-4 text-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="stat-item">
-                        <h4 class="display-4 fw-bold mb-2">13800+</h4>
-                        <p class="fs-5">Years of Excellence</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="stat-item">
-                        <h4 class="display-4 fw-bold mb-2">2000K+</h4>
-                        <p class="fs-5">Satisfied Customers</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="stat-item">
-                        <h4 class="display-4 fw-bold mb-2">1805+</h4>
-                        <p class="fs-5">Branch Locations</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bank Credentials Section -->
-    <section class="credentials py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <div class="section-badge">
-                        <i class="fas fa-shield-check"></i>
-                        <span>Our Credentials</span>
-                    </div>
-                    <h3 class="display-6 mb-3">Bank Credentials & Certifications</h3>
-                    <p class="lead">Recognized by leading financial institutions and regulatory bodies</p>
-                </div>
-            </div>
-
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="compliance-info">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8">
-                                <h4 class="mb-3">Regulatory Compliance & Security</h4>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="compliance-item">
-                                            <i class="fas fa-check-circle me-2"></i>
-                                            <span>Anti-Money Laundering (AMLA) Compliant</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="compliance-item">
-                                            <i class="fas fa-check-circle me-2"></i>
-                                            <span>Data Privacy Act Compliant</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="compliance-item">
-                                            <i class="fas fa-check-circle me-2"></i>
-                                            <span>Cybersecurity Framework Certified</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 text-center">
-                                <div class="trust-seal">
-                                    <i class="fas fa-award"></i>
-                                    <h6 class="mt-2">Trusted Partner</h6>
-                                    <p class="small">69+ Years of Service</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="credential-card text-center h-100">
-                        <div class="credential-icon mx-auto mb-3">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h5 class="mb-3">BSP Supervised</h5>
-                        <p>Regulated and supervised by the Bangko Sentral ng Pilipinas (BSP)</p>
-                        <div class="credential-badge">
-                            <span>License No. RB-123</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="credential-card text-center h-100">
-                        <div class="credential-icon mx-auto mb-3">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <h5 class="mb-3">PDIC Insured</h5>
-                        <p>All deposits are insured by the Philippine Deposit Insurance Corporation</p>
-                        <div class="credential-badge">
-                            <span>Up to ₱1,000,000</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="credential-card text-center h-100">
-                        <div class="credential-icon mx-auto mb-3">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h5 class="mb-3">RBAP Member</h5>
-                        <p>Active member of the Rural Bankers Association of the Philippines</p>
-                        <div class="credential-badge">
-                            <span>Since 1956</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="credential-card text-center h-100">
-                        <div class="credential-icon mx-auto mb-3">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h5 class="mb-3">ISO Certified</h5>
-                        <p>Quality Management System certified for banking operations</p>
-                        <div class="credential-badge">
-                            <span>ISO 9001:2015</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Quick Links</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#home" class="text-decoration-none">Home</a></li>
-                            <!-- <li class="mb-2"><a href="#products" class="text-decoration-none">Services</a>
-                            </li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">News</a></li>
-                            <li class="mb-2"><a href="#foreclosed" class="text-decoration-none">Properties</a>
-                            </li> -->
-                            <li class="mb-2"><a href="#reports" class="text-decoration-none">Reports</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Services</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Savings Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Checking Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Basic Deposit Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Time Deposit Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Loan Account</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Connect With Us</h4>
-                        <p>Stay updated with the latest financial news and services.</p>
-                        <div class="social-icons d-flex gap-2 mt-3">
-                            <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f"></i></a>
-                            <!-- <a href="#" class="text-decoration-none"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="text-decoration-none"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="text-decoration-none"><i class="fab fa-instagram"></i></a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom border-top pt-3 text-center">
-                <p class="mb-0">&copy; 2025 RBDI. All rights reserved. | <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a> | Terms of
-                Service | PDIC Insured</p>
+            <div class="footer__base">
+                <span>&copy; 2026 Rural Bank of Digos, Inc. All rights reserved.</span>
+                <nav aria-label="Legal">
+                    <a href="privacy-policy.html">Privacy notice</a>
+                    <a href="#">Terms of service</a>
+                    <a href="#">Sitemap</a>
+                </nav>
             </div>
         </div>
     </footer>
 
-    <!-- Privacy Policy Acceptance Dialog -->
-    <div id="privacyModal" class="privacy-modal">
-        <div class="privacy-modal-content">
-            <div class="privacy-modal-header">
-                <div class="privacy-icon">
-                    <i class="fas fa-shield-check"></i>
+    <div class="consent" id="consent" role="dialog" aria-modal="true" aria-labelledby="consent-title" hidden>
+        <div class="consent__box">
+            <div class="consent__head">
+                <span class="consent__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+                <div>
+                    <h2 class="consent__title" id="consent-title">Privacy Notice &amp; Cookie Policy</h2>
+                    <p class="consent__sub">Your privacy matters to us</p>
                 </div>
-                <h3>Privacy Policy & Cookie Notice</h3>
-                <p class="privacy-subtitle">Your privacy matters to us</p>
             </div>
-            
-            <div class="privacy-modal-body">
-                <p>We use cookies and similar technologies to enhance your browsing experience, provide personalized content, and analyze our traffic. By continuing to use our website, you consent to our use of cookies and agree to our Privacy Policy.</p>
-                
-                <div class="privacy-highlights">
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We protect your personal information</span>
-                    </div>
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We comply with Philippine Data Privacy Act</span>
-                    </div>
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We never sell your data to third parties</span>
-                    </div>
-                </div>
-                
-                <div class="privacy-actions">
-                    <button id="acceptPrivacy" class="btn btn-accept">
-                        <i class="fas fa-check me-2"></i>Accept All
-                    </button>
-                    <button id="declinePrivacy" class="btn btn-decline">
-                        <i class="fas fa-times me-2"></i>Decline
-                    </button>
-                </div>
+            <p class="consent__text">We use cookies to keep this site secure and to understand which pages customers use
+                most. We do not sell your data, and we comply with the Data Privacy Act of 2012.</p>
+            <label class="choice-check"><input type="checkbox"><span><span class="choice-check__label">Analytics
+                        cookies</span><span class="choice-check__desc">Helps us see which pages are hard to find.
+                        Optional.</span></span></label>
+            <div class="btn-row">
+                <button class="btn btn--primary" type="button" data-consent-accept><i class="fa-solid fa-check"
+                        aria-hidden="true"></i><span>Accept all</span></button>
+                <button class="btn btn--ghost" type="button" data-consent-accept><span>Essential only</span></button>
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap 5.3 JavaScript Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="assets/scripts/script.js"></script>
-    <script src="assets/scripts/privacy-modal.js"></script>
+    <script src="assets/scripts/site.js"></script>
 </body>
 
 </html>

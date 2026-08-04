@@ -2,867 +2,365 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Rural Bank of Digos</title>
-    
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous">
-    
-    <!-- Font Awesome 6.0.0 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/privacy-modal.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services — Rural Bank of Digos</title>
+    <meta name="description" content="Deposit accounts and loan products from Rural Bank of Digos, Inc.">
+    <link rel="icon" href="assets/images/logo-mark-navy.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-8">
-                        <div class="contact-info d-flex flex-wrap gap-3">
-                            <span><i class="fas fa-phone"></i> +082 553-4641</span>
-                            <span><i class="fas fa-envelope"></i> rbdigos@rbap.org</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Digos - Makar Rd</span>
-                        </div>
-                    </div>
-                </div>
+
+    <header class="site-header">
+        <div class="utilbar">
+            <div class="wrap">
+                <span><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+0825534641"
+                        style="color:inherit">+082 553-4641</a></span>
+                <span><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:rbdigos@rbap.org"
+                        style="color:inherit">rbdigos@rbap.org</a></span>
+                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rizal Ave, Digos City</span>
+                <span class="utilbar__pdic"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Deposits insured
+                    by PDIC up to &#8369;1,000,000</span>
             </div>
         </div>
-
-        <nav class="navbar navbar-expand-lg modern-nav">
-            <div class="container">
-                <div class="logo navbar-brand">
-                    <img src="assets/images/old-logo-tagline-white.png" alt="Rural Bank of Digos Logo" class="logo-image">
+        <div class="navbar">
+            <div class="wrap">
+                <a class="logo" href="index.html"><img src="assets/images/logo-navy.png" alt="Rural Bank of Digos"></a>
+                <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><i
+                        class="fa-solid fa-bars" aria-hidden="true"></i></button>
+                <nav class="nav" aria-label="Main">
+                    <a class="nav-link" href="index.html"><i class="fa-solid fa-house"
+                            aria-hidden="true"></i><span>Home</span></a>
+                    <a class="nav-link is-active" href="services.html" aria-current="page"><i
+                            class="fa-solid fa-briefcase" aria-hidden="true"></i><span>Services</span></a>
+                    <a class="nav-link" href="branches.html"><i class="fa-solid fa-building-columns"
+                            aria-hidden="true"></i><span>Branches</span></a>
+                    <a class="nav-link" href="reports.html"><i class="fa-solid fa-chart-column"
+                            aria-hidden="true"></i><span>Reports</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <div class="wrap">
+                <div class="sec-head sec-head--center">
+                    <h1 class="sec-title">What would you like to do?</h1>
+                    <p class="sec-sub">Pick one. We'll show you only what applies.</p>
                 </div>
+                <div class="choices" role="tablist" aria-label="Product type">
+                    <button class="choice is-active" type="button" role="tab" aria-selected="true" data-choice="save"><i
+                            class="fa-solid fa-piggy-bank" aria-hidden="true"></i><span class="choice__text"><span
+                                class="choice__label">Save money</span><span class="choice__note">4 deposit
+                                accounts</span></span></button>
+                    <button class="choice" type="button" role="tab" aria-selected="false" data-choice="borrow"><i
+                            class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i><span
+                            class="choice__text"><span class="choice__label">Borrow money</span><span
+                                class="choice__note">4 loan products</span></span></button>
+                </div>
+                <div class="product-list" data-list="save">
+                    <article class="row">
+                        <button class="row__head" type="button" aria-expanded="false">
+                            <span class="row__icon"><i class="fa-solid fa-piggy-bank" aria-hidden="true"></i></span>
+                            <span class="row__text"><span class="row__title">Savings account</span><span
+                                    class="row__desc">Everyday savings with passbook or ATM access at any RBDigos
+                                    office.</span></span>
+                            <i class="fa-solid fa-chevron-down row__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="row__body" hidden>
+                            <ul class="checklist">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>&#8369;500 opening
+                                        balance</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Interest credited
+                                        quarterly</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Withdraw at any
+                                        branch</span></li>
+                            </ul>
+                            <div class="btn-row">
+                                <a class="btn btn--primary btn--sm" href="branches.html"><span>Talk to a branch
+                                        officer</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="btn btn--ghost btn--sm" href="reports.html"><i class="fa-solid fa-file-pdf"
+                                        aria-hidden="true"></i><span>Application form</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="row">
+                        <button class="row__head" type="button" aria-expanded="false">
+                            <span class="row__icon"><i class="fa-solid fa-wallet" aria-hidden="true"></i></span>
+                            <span class="row__text"><span class="row__title">Basic deposit account</span><span
+                                    class="row__desc">A no-frills account under the BSP financial-inclusion
+                                    framework.</span></span>
+                            <i class="fa-solid fa-chevron-down row__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="row__body" hidden>
+                            <ul class="checklist">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>&#8369;100 to open</span>
+                                </li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>No maintaining
+                                        balance</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>One valid ID only</span>
+                                </li>
+                            </ul>
+                            <div class="btn-row">
+                                <a class="btn btn--primary btn--sm" href="branches.html"><span>Talk to a branch
+                                        officer</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="btn btn--ghost btn--sm" href="reports.html"><i class="fa-solid fa-file-pdf"
+                                        aria-hidden="true"></i><span>Application form</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="row">
+                        <button class="row__head" type="button" aria-expanded="false">
+                            <span class="row__icon"><i class="fa-solid fa-money-check-dollar"
+                                    aria-hidden="true"></i></span>
+                            <span class="row__text"><span class="row__title">Checking account</span><span
+                                    class="row__desc">For traders and cooperatives that settle by cheque.</span></span>
+                            <i class="fa-solid fa-chevron-down row__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="row__body" hidden>
+                            <ul class="checklist">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Personalised cheque
+                                        booklets</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Monthly statements</span>
+                                </li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Over-the-counter
+                                        encashment</span></li>
+                            </ul>
+                            <div class="btn-row">
+                                <a class="btn btn--primary btn--sm" href="branches.html"><span>Talk to a branch
+                                        officer</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="btn btn--ghost btn--sm" href="reports.html"><i class="fa-solid fa-file-pdf"
+                                        aria-hidden="true"></i><span>Application form</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="row">
+                        <button class="row__head" type="button" aria-expanded="false">
+                            <span class="row__icon"><i class="fa-solid fa-vault" aria-hidden="true"></i></span>
+                            <span class="row__text"><span class="row__title">Time deposit</span><span
+                                    class="row__desc">Lock in a higher rate for a fixed term, from 30 to 360
+                                    days.</span></span>
+                            <i class="fa-solid fa-chevron-down row__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="row__body" hidden>
+                            <ul class="checklist">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Terms 30–360 days</span>
+                                </li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Certificate issued on
+                                        placement</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Auto-renewal on
+                                        request</span></li>
+                            </ul>
+                            <div class="btn-row">
+                                <a class="btn btn--primary btn--sm" href="branches.html"><span>Talk to a branch
+                                        officer</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="btn btn--ghost btn--sm" href="reports.html"><i class="fa-solid fa-file-pdf"
+                                        aria-hidden="true"></i><span>Application form</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="product-list" data-list="borrow" hidden>
+                    <article class="row">
+                        <button class="row__head" type="button" aria-expanded="false">
+                            <span class="row__icon"><i class="fa-solid fa-tractor" aria-hidden="true"></i></span>
+                            <span class="row__text"><span class="row__title">Agriculture loan</span><span
+                                    class="row__desc">Working capital timed to the planting and harvest
+                                    cycle.</span></span>
+                            <i class="fa-solid fa-chevron-down row__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="row__body" hidden>
+                            <ul class="checklist">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Crop, livestock and farm
+                                        equipment</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Repayment matched to
+                                        harvest</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Farm visit within 3
+                                        banking days</span></li>
+                            </ul>
+                            <div class="btn-row">
+                                <a class="btn btn--primary btn--sm" href="branches.html"><span>Talk to a branch
+                                        officer</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="btn btn--ghost btn--sm" href="reports.html"><i class="fa-solid fa-file-pdf"
+                                        aria-hidden="true"></i><span>Application form</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="row">
+                        <button class="row__head" type="button" aria-expanded="false">
+                            <span class="row__icon"><i class="fa-solid fa-store" aria-hidden="true"></i></span>
+                            <span class="row__text"><span class="row__title">Commercial loan</span><span
+                                    class="row__desc">Inventory and expansion financing for established
+                                    businesses.</span></span>
+                            <i class="fa-solid fa-chevron-down row__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="row__body" hidden>
+                            <ul class="checklist">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Real-estate or chattel
+                                        collateral</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Credit line option</span>
+                                </li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Dedicated account
+                                        officer</span></li>
+                            </ul>
+                            <div class="btn-row">
+                                <a class="btn btn--primary btn--sm" href="branches.html"><span>Talk to a branch
+                                        officer</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="btn btn--ghost btn--sm" href="reports.html"><i class="fa-solid fa-file-pdf"
+                                        aria-hidden="true"></i><span>Application form</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="row">
+                        <button class="row__head" type="button" aria-expanded="false">
+                            <span class="row__icon"><i class="fa-solid fa-hand-holding-dollar"
+                                    aria-hidden="true"></i></span>
+                            <span class="row__text"><span class="row__title">Microfinance loan</span><span
+                                    class="row__desc">Small, fast loans for sari-sari stores, vendors and tricycle
+                                    operators.</span></span>
+                            <i class="fa-solid fa-chevron-down row__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="row__body" hidden>
+                            <ul class="checklist">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>No collateral
+                                        required</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Weekly collection</span>
+                                </li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Release in 5 banking
+                                        days</span></li>
+                            </ul>
+                            <div class="btn-row">
+                                <a class="btn btn--primary btn--sm" href="branches.html"><span>Talk to a branch
+                                        officer</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="btn btn--ghost btn--sm" href="reports.html"><i class="fa-solid fa-file-pdf"
+                                        aria-hidden="true"></i><span>Application form</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="row">
+                        <button class="row__head" type="button" aria-expanded="false">
+                            <span class="row__icon"><i class="fa-solid fa-user-shield" aria-hidden="true"></i></span>
+                            <span class="row__text"><span class="row__title">Personal &amp; salary loan</span><span
+                                    class="row__desc">For tuition, medical costs, home repair and
+                                    emergencies.</span></span>
+                            <i class="fa-solid fa-chevron-down row__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="row__body" hidden>
+                            <ul class="checklist">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Salary deduction
+                                        available</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Fixed monthly
+                                        amortisation</span></li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Co-maker in place of
+                                        collateral</span></li>
+                            </ul>
+                            <div class="btn-row">
+                                <a class="btn btn--primary btn--sm" href="branches.html"><span>Talk to a branch
+                                        officer</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="btn btn--ghost btn--sm" href="reports.html"><i class="fa-solid fa-file-pdf"
+                                        aria-hidden="true"></i><span>Application form</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="help-row">
+                    <span>Not sure which one fits?</span>
+                    <a class="btn btn--outline btn--sm" href="tel:+0825534641"><i class="fa-solid fa-phone"
+                            aria-hidden="true"></i><span>Call +082 553-4641</span></a>
+                    <a class="btn btn--ghost btn--sm" href="branches.html"><span>Find your nearest office</span><i
+                            class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-                <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="toggler-line"></span>
-                    <span class="toggler-line"></span>
-                    <span class="toggler-line"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto modern-nav-menu">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">
-                                <i class="fas fa-home nav-icon"></i>
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link active" href="services.html">
-                                <i class="fas fa-briefcase nav-icon"></i>
-                                <span>Services</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="news.html">
-                                <i class="fas fa-newspaper nav-icon"></i>
-                                <span>News</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#foreclosed">
-                                <i class="fas fa-home nav-icon"></i>
-                                <span>Properties</span>
-                            </a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="reports.html">
-                                <i class="fas fa-chart-bar nav-icon"></i>
-                                <span>Reports</span>
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="about.html">
-                                <i class="fas fa-info-circle nav-icon"></i>
-                                <span>About</span>
-                            </a>
-                        </li> -->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link contact-btn" href="contact.html">
-                                <i class="fas fa-phone nav-icon"></i>
-                                <span>Contact</span>
-                            </a>
-                        </li> -->
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="assets/images/logo-white.png" alt="Rural Bank of Digos">
+                    <p class="footer__blurb">Rural Bank of Digos, Inc. has served Davao del Sur, Davao Occidental and
+                        North Cotabato since 1956.</p>
+                    <div><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                                aria-hidden="true"></i></a></div>
+                </div>
+                <div class="footer__col">
+                    <h2>Bank with us</h2>
+                    <ul>
+                        <li><a href="services.html">Savings account</a></li>
+                        <li><a href="services.html">Checking account</a></li>
+                        <li><a href="services.html">Basic deposit account</a></li>
+                        <li><a href="services.html">Time deposit</a></li>
+                        <li><a href="services.html">Loan accounts</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="footer__col">
+                    <h2>About RBDigos</h2>
+                    <ul>
+                        <li><a href="#">Our story</a></li>
+                        <li><a href="#">Board &amp; management</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="index.html#advisories">News &amp; advisories</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer__col">
+                    <h2>Transparency</h2>
+                    <ul>
+                        <li><a href="reports.html">Annual reports</a></li>
+                        <li><a href="reports.html">Balance sheets</a></li>
+                        <li><a href="reports.html">Forms &amp; documents</a></li>
+                        <li><a href="privacy-policy.html">Privacy notice</a></li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="services-hero">
-        <div class="hero-gradient"></div>
-        <div class="container">
-            <div class="row align-items-center min-vh-50">
-                <div class="col-lg-6">
-                    <div class="hero-content">
-                        <div class="service-badge-hero mb-4">
-                            <i class="fas fa-star"></i>
-                            <span>Complete Banking Solutions</span>
-                        </div>
-                        <h1 class="hero-title mb-4">Your Financial Success Starts Here</h1>
-                        <p class="hero-subtitle mb-5">Discover comprehensive banking services designed to empower your financial journey. From personal accounts to business solutions, we're here to help you grow.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="hero-visual">
-                        <div class="floating-cards">
-                            <div class="floating-card card-1">
-                                <i class="fas fa-piggy-bank"></i>
-                                <span>Savings</span>
-                            </div>
-                            <div class="floating-card card-2">
-                                <i class="fas fa-credit-card"></i>
-                                <span>Checking</span>
-                            </div>
-                            <div class="floating-card card-3">
-                                <i class="fas fa-seedling"></i>
-                                <span>Loans</span>
-                            </div>
-                            <div class="floating-card card-4">
-                                <i class="fas fa-building"></i>
-                                <span>Business</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="footer__legal">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                <p>Rural Bank of Digos, Inc. is regulated by the Bangko Sentral ng Pilipinas. Deposits are insured by
+                    the PDIC up to &#8369;1,000,000 per depositor. For concerns, contact us at <strong>+082
+                        553-4641</strong> or <strong>rbdigos@rbap.org</strong>. BSP Consumer Assistance: (02) 8708-7087,
+                    consumeraffairs@bsp.gov.ph.</p>
             </div>
-        </div>
-    </section>
-    <!-- Services Grid -->
-    <section class="services-showcase">
-        <div class="container">
-            <!-- Personal Banking Section -->
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <div class="section-badge">
-                        <i class="fas fa-user"></i>
-                        <span>Personal Banking</span>
-                    </div>
-                    <h2 class="section-title">Personal Banking Services</h2>
-                    <p class="section-subtitle">Tailored financial solutions designed to help you manage, grow, and protect your personal wealth</p>
-                </div>
-            </div>
-            
-            <div class="services-grid">
-                
-                <!-- Personal Banking Services -->
-                <div class="service-item" data-category="personal">
-                    <div class="modern-service-card">
-                        <div class="card-header">
-                            <div class="service-icon-modern personal">
-                                <i class="fas fa-piggy-bank"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag personal">Personal Banking</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">Savings Accounts</h3>
-                            <p class="service-description">Build your wealth with competitive interest rates and flexible savings options tailored for your financial growth.</p>
-                            <div class="service-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-percentage"></i>
-                                    <span>High Interest Rates</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>PDIC Insured</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-credit-card"></i>
-                                    <span>ATM Access</span>
-                                </div>
-                            </div>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>No maintaining balance for first year</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Free passbook updates</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Monthly statements available</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="service-btn primary">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-item" data-category="personal">
-                    <div class="modern-service-card">
-                        <div class="card-header">
-                            <div class="service-icon-modern personal">
-                                <i class="fas fa-credit-card"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag personal">Personal Banking</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">Checking Accounts</h3>
-                            <p class="service-description">Manage your daily transactions with ease and convenience through our flexible checking solutions.</p>
-                            <div class="service-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-infinity"></i>
-                                    <span>Unlimited Checks</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-globe"></i>
-                                    <span>Online Banking</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-shield-check"></i>
-                                    <span>Overdraft Protection</span>
-                                </div>
-                            </div>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Monthly statements included</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>24/7 account access</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Mobile banking support</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="service-btn primary">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-item" data-category="personal">
-                    <div class="modern-service-card">
-                        <div class="card-header">
-                            <div class="service-icon-modern personal">
-                                <i class="fas fa-wallet"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag personal">Personal Banking</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">Basic Deposit Accounts</h3>
-                            <p class="service-description">Simple and accessible banking for everyone with no minimum balance requirements.</p>
-                            <div class="service-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-hand-holding"></i>
-                                    <span>No Minimum Balance</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-coins"></i>
-                                    <span>Low Fees</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-user-check"></i>
-                                    <span>Easy Opening</span>
-                                </div>
-                            </div>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Basic banking services included</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Ideal for first-time savers</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Financial literacy support</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="service-btn primary">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-item" data-category="personal">
-                    <div class="modern-service-card">
-                        <div class="card-header">
-                            <div class="service-icon-modern personal">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag personal">Personal Banking</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">Time Deposit Accounts</h3>
-                            <p class="service-description">Secure your future with guaranteed returns on fixed-term investments and competitive rates.</p>
-                            <div class="service-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-chart-line"></i>
-                                    <span>Competitive Rates</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    <span>Flexible Terms</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-redo"></i>
-                                    <span>Auto Renewal</span>
-                                </div>
-                            </div>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>PDIC insured up to ₱1M</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Multiple term options available</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Guaranteed fixed returns</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="service-btn primary">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Business Banking Section -->
-            <div class="row mb-5 mt-5">
-                <div class="col-12 text-center">
-                    <div class="section-badge">
-                        <i class="fas fa-building"></i>
-                        <span>Business Banking</span>
-                    </div>
-                    <h2 class="section-title">Business Banking Solutions</h2>
-                    <p class="section-subtitle">Comprehensive financial services designed to help your business thrive and expand</p>
-                </div>
-            </div>
-            
-            <div class="services-grid">
-                <!-- Business Banking Services -->
-                <div class="service-item" data-category="business">
-                    <div class="modern-service-card">
-                        <div class="card-header">
-                            <div class="service-icon-modern business">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag business">Business Banking</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">Business Accounts</h3>
-                            <p class="service-description">Comprehensive business banking solutions designed for enterprises of all sizes and industries.</p>
-                            <div class="service-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-handshake"></i>
-                                    <span>Merchant Services</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-money-check-alt"></i>
-                                    <span>Cash Management</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>Payroll Services</span>
-                                </div>
-                            </div>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Business checking accounts</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Dedicated business support</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Corporate banking services</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="service-btn business">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Loan Services Section -->
-            <div class="row mb-5 mt-5">
-                <div class="col-12 text-center">
-                    <div class="section-badge">
-                        <i class="fas fa-seedling"></i>
-                        <span>Loan Services</span>
-                    </div>
-                    <h2 class="section-title">Loan & Financing Solutions</h2>
-                    <p class="section-subtitle">Flexible financing options to help you achieve your personal and business goals</p>
-                </div>
-            </div>
-            
-            <div class="services-grid">
-                <!-- Loan Services -->
-                <div class="service-item" data-category="loans">
-                    <div class="modern-service-card">
-                        <div class="card-header">
-                            <div class="service-icon-modern loans">
-                                <i class="fas fa-seedling"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag loans">Loan Services</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">Agriculture Loans</h3>
-                            <p class="service-description">Specialized financing solutions designed for farmers and agricultural businesses to grow and prosper.</p>
-                            <div class="service-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-tractor"></i>
-                                    <span>Equipment Finance</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-leaf"></i>
-                                    <span>Crop Production</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-calendar-check"></i>
-                                    <span>Flexible Terms</span>
-                                </div>
-                            </div>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Livestock financing available</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Seasonal payment options</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Agricultural expert support</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="service-btn loans">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-item" data-category="loans">
-                    <div class="modern-service-card">
-                        <div class="card-header">
-                            <div class="service-icon-modern loans">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag loans">Loan Services</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">Commercial Loans</h3>
-                            <p class="service-description">Business expansion and working capital loans for commercial enterprises seeking growth opportunities.</p>
-                            <div class="service-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-chart-bar"></i>
-                                    <span>Working Capital</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-expand-arrows-alt"></i>
-                                    <span>Business Expansion</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-percentage"></i>
-                                    <span>Competitive Rates</span>
-                                </div>
-                            </div>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Equipment financing options</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Fast approval process</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Business advisory support</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="service-btn loans">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-item" data-category="loans">
-                    <div class="modern-service-card">
-                        <div class="card-header">
-                            <div class="service-icon-modern loans">
-                                <i class="fas fa-hand-holding-heart"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag loans">Loan Services</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">Microfinance Loans</h3>
-                            <p class="service-description">Small loans designed for micro-entrepreneurs and small business owners to start and grow their ventures.</p>
-                            <div class="service-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>Quick Approval</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-handshake"></i>
-                                    <span>No Collateral</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <span>Financial Training</span>
-                                </div>
-                            </div>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Flexible payment schedules</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Financial literacy programs</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Community support network</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="service-btn loans">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-item" data-category="loans">
-                    <div class="modern-service-card">
-                        <div class="card-header">
-                            <div class="service-icon-modern loans">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag loans">Loan Services</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">Personal Loans</h3>
-                            <p class="service-description">Personal financing solutions tailored to meet your individual needs and help achieve your personal goals.</p>
-                            <div class="service-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-tools"></i>
-                                    <span>Home Improvement</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-book"></i>
-                                    <span>Education Loans</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-clock"></i>
-                                    <span>Quick Processing</span>
-                                </div>
-                            </div>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Emergency loan options</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Competitive interest rates</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Personalized loan terms</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button class="service-btn loans">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Quick Links</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="index.html" class="text-decoration-none">Home</a></li>
-                            <!-- <li class="mb-2"><a href="services.html" class="text-decoration-none">Services</a></li>
-                            <li class="mb-2"><a href="news.html" class="text-decoration-none">News</a></li>
-                            <li class="mb-2"><a href="#foreclosed" class="text-decoration-none">Properties</a></li> -->
-                            <li class="mb-2"><a href="reports.html" class="text-decoration-none">Reports</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Services</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Savings Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Checking Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Basic Deposit Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Time Deposit Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Loan Account</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Connect With Us</h4>
-                        <p>Stay updated with the latest financial news and services.</p>
-                        <div class="social-icons d-flex gap-2 mt-3">
-                            <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom border-top pt-3 text-center">
-                <p class="mb-0">&copy; 2025 RBDI. All rights reserved. | <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a> | Terms of Service | PDIC Insured</p>
+            <div class="footer__base">
+                <span>&copy; 2026 Rural Bank of Digos, Inc. All rights reserved.</span>
+                <nav aria-label="Legal">
+                    <a href="privacy-policy.html">Privacy notice</a>
+                    <a href="#">Terms of service</a>
+                    <a href="#">Sitemap</a>
+                </nav>
             </div>
         </div>
     </footer>
 
-    <!-- Privacy Policy Acceptance Dialog -->
-    <div id="privacyModal" class="privacy-modal">
-        <div class="privacy-modal-content">
-            <div class="privacy-modal-header">
-                <div class="privacy-icon">
-                    <i class="fas fa-shield-check"></i>
+    <div class="consent" id="consent" role="dialog" aria-modal="true" aria-labelledby="consent-title" hidden>
+        <div class="consent__box">
+            <div class="consent__head">
+                <span class="consent__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+                <div>
+                    <h2 class="consent__title" id="consent-title">Privacy Notice &amp; Cookie Policy</h2>
+                    <p class="consent__sub">Your privacy matters to us</p>
                 </div>
-                <h3>Privacy Policy & Cookie Notice</h3>
-                <p class="privacy-subtitle">Your privacy matters to us</p>
             </div>
-            
-            <div class="privacy-modal-body">
-                <p>We use cookies and similar technologies to enhance your browsing experience, provide personalized content, and analyze our traffic. By continuing to use our website, you consent to our use of cookies and agree to our <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.</p>
-                
-                <div class="privacy-highlights">
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We protect your personal information</span>
-                    </div>
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We comply with Philippine Data Privacy Act</span>
-                    </div>
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We never sell your data to third parties</span>
-                    </div>
-                </div>
-                
-                <div class="privacy-actions">
-                    <button id="acceptPrivacy" class="btn btn-accept">
-                        <i class="fas fa-check me-2"></i>Accept All
-                    </button>
-                    <button id="declinePrivacy" class="btn btn-decline">
-                        <i class="fas fa-times me-2"></i>Decline
-                    </button>
-                </div>
+            <p class="consent__text">We use cookies to keep this site secure and to understand which pages customers use
+                most. We do not sell your data, and we comply with the Data Privacy Act of 2012.</p>
+            <label class="choice-check"><input type="checkbox"><span><span class="choice-check__label">Analytics
+                        cookies</span><span class="choice-check__desc">Helps us see which pages are hard to find.
+                        Optional.</span></span></label>
+            <div class="btn-row">
+                <button class="btn btn--primary" type="button" data-consent-accept><i class="fa-solid fa-check"
+                        aria-hidden="true"></i><span>Accept all</span></button>
+                <button class="btn btn--ghost" type="button" data-consent-accept><span>Essential only</span></button>
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap 5.3 JavaScript Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="assets/scripts/script.js"></script>
-    <script src="assets/scripts/privacy-modal.js"></script>
-    
-    <script>
-        // Modern service filtering functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.category-btn');
-            const serviceItems = document.querySelectorAll('.service-item');
-            
-            // Initialize animation
-            setTimeout(() => {
-                serviceItems.forEach((item, index) => {
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, index * 100);
-                });
-            }, 200);
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Animate out all items first
-                    serviceItems.forEach((item, index) => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            // Show matching items
-                            item.style.display = 'block';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'translateY(0) scale(1)';
-                            }, index * 50);
-                        } else {
-                            // Hide non-matching items
-                            item.style.opacity = '0';
-                            item.style.transform = 'translateY(30px) scale(0.95)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                });
-            });
-            
-            // Smooth scroll for CTA buttons
-            const ctaButtons = document.querySelectorAll('.service-btn');
-            ctaButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    if (!this.onclick) { // Only if it's not a download button
-                        e.preventDefault();
-                        // Add ripple effect
-                        const ripple = document.createElement('span');
-                        ripple.classList.add('ripple');
-                        this.appendChild(ripple);
-                        
-                        setTimeout(() => {
-                            ripple.remove();
-                        }, 600);
-                    }
-                });
-            });
-        });
-        
-        // Add ripple effect CSS
-        const style = document.createElement('style');
-        style.textContent = `
-            .service-btn {
-                position: relative;
-                overflow: hidden;
-            }
-            
-            .ripple {
-                position: absolute;
-                border-radius: 50%;
-                transform: scale(0);
-                animation: ripple-animation 0.6s linear;
-                background-color: rgba(255, 255, 255, 0.3);
-            }
-            
-            @keyframes ripple-animation {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
+    <script src="assets/scripts/site.js"></script>
 </body>
 
 </html>

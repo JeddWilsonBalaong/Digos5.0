@@ -2,435 +2,240 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reports & Downloads - Rural Bank of Digos</title>
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
-    <link href="assets/css/privacy-modal.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reports & Disclosures — Rural Bank of Digos</title>
+    <meta name="description" content="Annual reports, balance sheets and account application forms.">
+    <link rel="icon" href="assets/img/logo-mark-navy.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-8">
-                        <div class="contact-info d-flex flex-wrap gap-3">
-                            <span><i class="fas fa-phone"></i> +082 553-4641</span>
-                            <span><i class="fas fa-envelope"></i> rbdigos@rbap.org</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Digos - Makar Rd</span>
+
+    <header class="site-header">
+        <div class="utilbar">
+            <div class="wrap">
+                <span><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+0825534641"
+                        style="color:inherit">+082 553-4641</a></span>
+                <span><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:rbdigos@rbap.org"
+                        style="color:inherit">rbdigos@rbap.org</a></span>
+                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rizal Ave, Digos City</span>
+                <span class="utilbar__pdic"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Deposits insured
+                    by PDIC up to &#8369;1,000,000</span>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="wrap">
+                <a class="logo" href="index.html"><img src="assets/img/logo-navy.png" alt="Rural Bank of Digos"></a>
+                <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><i
+                        class="fa-solid fa-bars" aria-hidden="true"></i></button>
+                <nav class="nav" aria-label="Main">
+                    <a class="nav-link" href="index.html"><i class="fa-solid fa-house"
+                            aria-hidden="true"></i><span>Home</span></a>
+                    <a class="nav-link" href="services.html"><i class="fa-solid fa-briefcase"
+                            aria-hidden="true"></i><span>Services</span></a>
+                    <a class="nav-link" href="branches.html"><i class="fa-solid fa-building-columns"
+                            aria-hidden="true"></i><span>Branches</span></a>
+                    <a class="nav-link is-active" href="reports.html" aria-current="page"><i
+                            class="fa-solid fa-chart-column" aria-hidden="true"></i><span>Reports</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <section class="section section--sunken section--tight">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-chart-column" aria-hidden="true"></i>Transparency</span>
+                    <h1 class="sec-title">Financial reports &amp; forms</h1>
+                    <p class="sec-sub">Annual reports, balance sheets and account forms — all downloadable.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight">
+            <div class="wrap">
+                <div class="grid grid--2" style="align-items:start">
+                    <div class="stack" style="gap:24px">
+                        <div class="card card--raised panel">
+                            <h2 class="card-title">Financial report</h2>
+                            <div class="panel__list">
+                                <a class="dl" href="#" onclick="downloadReport('2025.pdf')" download><span
+                                        class="dl__icon"><i class="fa-solid fa-file-pdf"
+                                            aria-hidden="true"></i></span><span class="dl__title">Annual Report
+                                        2025</span><span class="dl__action"><span>Download</span><i
+                                            class="fa-solid fa-download" aria-hidden="true"></i></span></a>
+                                <a class="dl" href="#" onclick="downloadReport('2024.pdf')" download><span
+                                        class="dl__icon"><i class="fa-solid fa-file-pdf"
+                                            aria-hidden="true"></i></span><span class="dl__title">Annual Report
+                                        2024</span><span class="dl__action"><span>Download</span><i
+                                            class="fa-solid fa-download" aria-hidden="true"></i></span></a>
+                                <a class="dl" href="#" onclick="downloadReport('2023.pdf')" download><span
+                                        class="dl__icon"><i class="fa-solid fa-file-pdf"
+                                            aria-hidden="true"></i></span><span class="dl__title">Annual Report
+                                        2023</span><span class="dl__action"><span>Download</span><i
+                                            class="fa-solid fa-download" aria-hidden="true"></i></span></a>
+                                <a class="dl" href="#" onclick="downloadReport('2022.pdf')" download><span
+                                        class="dl__icon"><i class="fa-solid fa-file-pdf"
+                                            aria-hidden="true"></i></span><span class="dl__title">Annual Report
+                                        2022</span><span class="dl__action"><span>Download</span><i
+                                            class="fa-solid fa-download" aria-hidden="true"></i></span></a>
+                                <a class="dl" href="#" onclick="downloadReport('2021.pdf')" download><span
+                                        class="dl__icon"><i class="fa-solid fa-file-pdf"
+                                            aria-hidden="true"></i></span><span class="dl__title">Annual Report
+                                        2021</span><span class="dl__action"><span>Download</span><i
+                                            class="fa-solid fa-download" aria-hidden="true"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="card card--raised panel">
+                            <h2 class="card-title">Balance sheets</h2>
+                            <div class="panel__list">
+                                <a class="dl" href="#" onclick="downloadReport('PPBS_092025.pdf')" download><span
+                                        class="dl__icon"><i class="fa-solid fa-file-invoice-dollar"
+                                            aria-hidden="true"></i></span><span class="dl__title">Balance Sheet
+                                        September 2025</span><span class="dl__action"><span>Download</span><i
+                                            class="fa-solid fa-download" aria-hidden="true"></i></span></a>
+                                <a class="dl" href="#" onclick="downloadReport('PPBS_062025.pdf')" download><span
+                                        class="dl__icon"><i class="fa-solid fa-file-invoice-dollar"
+                                            aria-hidden="true"></i></span><span class="dl__title">Balance Sheet June
+                                        2025</span><span class="dl__action"><span>Download</span><i
+                                            class="fa-solid fa-download" aria-hidden="true"></i></span></a>
+                                <a class="dl" href="#" onclick="downloadReport('PPBS_032025.pdf')" download><span
+                                        class="dl__icon"><i class="fa-solid fa-file-invoice-dollar"
+                                            aria-hidden="true"></i></span><span class="dl__title">Balance Sheet March
+                                        2025</span><span class="dl__action"><span>Download</span><i
+                                            class="fa-solid fa-download" aria-hidden="true"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card--raised panel">
+                        <h2 class="card-title">Forms &amp; documents</h2>
+                        <p class="card-text" style="margin-top:0">Print, fill in and bring to any office — or ask a
+                            branch officer to help.</p>
+                        <div class="panel__list">
+                            <a class="dl" href="#" download><span class="dl__icon"><i class="fa-solid fa-file-lines"
+                                        aria-hidden="true"></i></span><span class="dl__title">Saving Account
+                                    Form</span><span class="dl__action"><span>Download</span><i
+                                        class="fa-solid fa-download" aria-hidden="true"></i></span></a>
+                            <a class="dl" href="#" download><span class="dl__icon"><i class="fa-solid fa-file-lines"
+                                        aria-hidden="true"></i></span><span class="dl__title">Checking Account
+                                    Form</span><span class="dl__action"><span>Download</span><i
+                                        class="fa-solid fa-download" aria-hidden="true"></i></span></a>
+                            <a class="dl" href="#" download><span class="dl__icon"><i class="fa-solid fa-file-lines"
+                                        aria-hidden="true"></i></span><span class="dl__title">Time Deposit Account
+                                    Form</span><span class="dl__action"><span>Download</span><i
+                                        class="fa-solid fa-download" aria-hidden="true"></i></span></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <nav class="navbar navbar-expand-lg modern-nav">
-            <div class="container">
-                <div class="logo navbar-brand">
-                     <img src="assets/images/old-logo-tagline-white.png" alt="Rural Bank of Digos Logo" class="logo-image">
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="assets/images/logo-white.png" alt="Rural Bank of Digos">
+                    <p class="footer__blurb">Rural Bank of Digos, Inc. has served Davao del Sur, Davao Occidental and
+                        North Cotabato since 1956.</p>
+                    <div><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                                aria-hidden="true"></i></a></div>
                 </div>
-
-                <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="toggler-line"></span>
-                    <span class="toggler-line"></span>
-                    <span class="toggler-line"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto modern-nav-menu">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#home">
-                                <i class="fas fa-home nav-icon"></i>
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="services.html">
-                                <i class="fas fa-briefcase nav-icon"></i>
-                                <span>Services</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="news.html">
-                                <i class="fas fa-newspaper nav-icon"></i>
-                                <span>News</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#foreclosed">
-                                <i class="fas fa-home nav-icon"></i>
-                                <span>Properties</span>
-                            </a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link active" href="reports.html">
-                                <i class="fas fa-chart-bar nav-icon"></i>
-                                <span>Reports</span>
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="index.html#about">
-                                <i class="fas fa-info-circle nav-icon"></i>
-                                <span>About</span>
-                            </a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="branches.html">
-                                <i class="fas fa-building nav-icon"></i>
-                                <span>Branches</span>
-                            </a>
-                        </li>                        
-                        <!-- <li class="nav-item">
-                            <a class="nav-link contact-btn" href="contact.html">
-                                <i class="fas fa-phone nav-icon"></i>
-                                <span>Contact</span>
-                            </a>
-                        </li> -->
+                <div class="footer__col">
+                    <h2>Bank with us</h2>
+                    <ul>
+                        <li><a href="services.html">Savings account</a></li>
+                        <li><a href="services.html">Checking account</a></li>
+                        <li><a href="services.html">Basic deposit account</a></li>
+                        <li><a href="services.html">Time deposit</a></li>
+                        <li><a href="services.html">Loan accounts</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="footer__col">
+                    <h2>About RBDigos</h2>
+                    <ul>
+                        <li><a href="#">Our story</a></li>
+                        <li><a href="#">Board &amp; management</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="index.html#advisories">News &amp; advisories</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer__col">
+                    <h2>Transparency</h2>
+                    <ul>
+                        <li><a href="reports.html">Annual reports</a></li>
+                        <li><a href="reports.html">Balance sheets</a></li>
+                        <li><a href="reports.html">Forms &amp; documents</a></li>
+                        <li><a href="privacy-policy.html">Privacy notice</a></li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Reports Section -->
-    <section class="reports py-5" id="annual-reports">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <div class="section-badge">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Financial Transparency</span>
-                    </div>
-                    <h2 class="section-title">Reports</h2>
-                    <p class="section-subtitle">Download our comprehensive annual reports showcasing our financial performance and achievements</p>
-                </div>
+            <div class="footer__legal">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                <p>Rural Bank of Digos, Inc. is regulated by the Bangko Sentral ng Pilipinas. Deposits are insured by
+                    the PDIC up to &#8369;1,000,000 per depositor. For concerns, contact us at <strong>+082
+                        553-4641</strong> or <strong>rbdigos@rbap.org</strong>. BSP Consumer Assistance: (02) 8708-7087,
+                    consumeraffairs@bsp.gov.ph.</p>
             </div>
-
-            <!-- Annual Reports Grid -->
-            <div class="row g-4 mb-5">
-                <!-- 2024 Annual Report -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="report-card h-100">
-                        <div class="report-header">
-                            <div class="report-icon">
-                                <i class="fas fa-file-pdf"></i>
-                            </div>
-                            <div class="report-year">2024</div>
-                        </div>
-                        <div class="report-content">
-                            <h5>Annual Report 2024</h5>
-                            <p>Comprehensive financial performance and business achievements for fiscal year 2024.</p>
-                            <div class="report-details">
-                                <span class="report-format"><i class="fas fa-file-pdf"></i> PDF</span>
-                            </div>
-                        </div>
-                        <div class="report-actions">
-                            <button onclick="downloadReport('2024.pdf')" class="btn btn-primary w-100">
-                                <i class="fas fa-download me-2"></i>
-                                Download Report
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2024 Annual Report -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="report-card h-100">
-                        <div class="report-header">
-                            <div class="report-icon">
-                                <i class="fas fa-file-pdf"></i>
-                            </div>
-                            <div class="report-year">2023</div>
-                        </div>
-                        <div class="report-content">
-                            <h5>Annual Report 2023</h5>
-                            <p>Financial statements and operational highlights demonstrating sustained growth and stability.</p>
-                            <div class="report-details">
-                                <span class="report-format"><i class="fas fa-file-pdf"></i> PDF</span>
-                            </div>
-                        </div>
-                        <div class="report-actions">
-                            <button onclick="downloadReport('2023.pdf')" class="btn btn-primary w-100">
-                                <i class="fas fa-download me-2"></i>
-                                Download Report
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2022 Annual Report -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="report-card h-100">
-                        <div class="report-header">
-                            <div class="report-icon">
-                                <i class="fas fa-file-pdf"></i>
-                            </div>
-                            <div class="report-year">2022</div>
-                        </div>
-                        <div class="report-content">
-                            <h5>Annual Report 2022</h5>
-                            <p>Detailed financial analysis and strategic initiatives implemented during the recovery period.</p>
-                            <div class="report-details">
-                                <span class="report-format"><i class="fas fa-file-pdf"></i> PDF</span>
-                            </div>
-                        </div>
-                        <div class="report-actions">
-                            <button onclick="downloadReport('2022.pdf')" class="btn btn-primary w-100">
-                                <i class="fas fa-download me-2"></i>
-                                Download Report
-                            </button>   
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2021 Annual Report -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="report-card h-100">
-                        <div class="report-header">
-                            <div class="report-icon">
-                                <i class="fas fa-file-pdf"></i>
-                            </div>
-                            <div class="report-year">2021</div>
-                        </div>
-                        <div class="report-content">
-                            <h5>Annual Report 2021</h5>
-                            <p>Resilience and adaptation strategies during challenging economic conditions.</p>
-                            <div class="report-details">
-                                <span class="report-format"><i class="fas fa-file-pdf"></i> PDF</span>
-                            </div>
-                        </div>
-                        <div class="report-actions">
-                            <button onclick="downloadReport('2021.pdf')" class="btn btn-primary w-100">
-                                <i class="fas fa-download me-2"></i>
-                                Download Report
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2020 Annual Report -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="report-card h-100">
-                        <div class="report-header">
-                            <div class="report-icon">
-                                <i class="fas fa-file-pdf"></i>
-                            </div>
-                            <div class="report-year">2020</div>
-                        </div>
-                        <div class="report-content">
-                            <h5>Annual Report 2020</h5>
-                            <p>Navigating unprecedented challenges while maintaining strong financial fundamentals.</p>
-                            <div class="report-details">
-                                <span class="report-format"><i class="fas fa-file-pdf"></i> PDF</span>
-                            </div>
-                        </div>
-                        <div class="report-actions">
-                            <button onclick="downloadReport('2020.pdf')" class="btn btn-primary w-100">
-                                <i class="fas fa-download me-2"></i>
-                                Download Report
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Forms and Downloads Section -->
-            <div class="row" id="forms-downloads">
-                <div class="col-12 mb-4">
-                    <div class="section-header">
-                        <div class="section-badge">
-                            <i class="fas fa-download"></i>
-                            <span>Forms & Documents</span>
-                        </div>
-                        <h3 class="text-center mb-4">Banking Forms & Documents</h3>
-                        <p class="text-center text-muted">Download essential banking forms and regulatory documents</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <!-- Account Opening Forms -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="download-card h-100">
-                        <div class="download-header">
-                            <div class="download-icon">
-                                <i class="fas fa-user-plus"></i>
-                            </div>
-                            <h6>Account Forms</h6>
-                        </div>
-                        <div class="download-list">
-                            <a href="#" class="download-item">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Savings Account Form</span>
-                            </a>
-                            <a href="#" class="download-item">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Checking Account Form</span>
-                            </a>
-                            <a href="#" class="download-item">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Time Deposit Form</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Loan Applications -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="download-card h-100">
-                        <div class="download-header">
-                            <div class="download-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <h6>Other Reports</h6>
-                        </div>
-                        <div class="download-list">
-                            <a href="#" onclick="downloadReport('PPBS_092025.pdf')" class="download-item">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Balance Sheet September 2025</span>
-                            </a>
-                            <a href="#" onclick="downloadReport('PPBS_062025.pdf')" class="download-item">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Balance Sheet June 2025</span>
-                            </a>
-                            <a href="#" onclick="downloadReport('PPBS_032025.pdf')" class="download-item">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Balance Sheet March 2025</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-              
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Quick Links</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="index.html#home" class="text-decoration-none">Home</a></li>
-                            <li class="mb-2"><a href="index.html#products" class="text-decoration-none">Services</a></li>
-                            <li class="mb-2"><a href="index.html#news" class="text-decoration-none">News</a></li>
-                            <li class="mb-2"><a href="index.html#foreclosed" class="text-decoration-none">Properties</a></li>
-                            <li class="mb-2"><a href="reports.html" class="text-decoration-none">Reports</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Services</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Savings Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Checking Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Basic Deposit Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Time Deposit Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Loan Account</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Connect With Us</h4>
-                        <p>Stay updated with the latest financial news and services.</p>
-                        <div class="social-icons d-flex gap-2 mt-3">
-                            <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom border-top pt-3 text-center">
-                <p class="mb-0">&copy; 2025 RBDI. All rights reserved. | <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a> | Terms of Service | PDIC Insured</p>
+            <div class="footer__base">
+                <span>&copy; 2026 Rural Bank of Digos, Inc. All rights reserved.</span>
+                <nav aria-label="Legal">
+                    <a href="privacy-policy.html">Privacy notice</a>
+                    <a href="#">Terms of service</a>
+                    <a href="#">Sitemap</a>
+                </nav>
             </div>
         </div>
     </footer>
 
-    <!-- Privacy Policy Acceptance Dialog -->
-    <div id="privacyModal" class="privacy-modal">
-        <div class="privacy-modal-content">
-            <div class="privacy-modal-header">
-                <div class="privacy-icon">
-                    <i class="fas fa-shield-check"></i>
+    <div class="consent" id="consent" role="dialog" aria-modal="true" aria-labelledby="consent-title" hidden>
+        <div class="consent__box">
+            <div class="consent__head">
+                <span class="consent__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+                <div>
+                    <h2 class="consent__title" id="consent-title">Privacy Notice &amp; Cookie Policy</h2>
+                    <p class="consent__sub">Your privacy matters to us</p>
                 </div>
-                <h3>Privacy Policy & Cookie Notice</h3>
-                <p class="privacy-subtitle">Your privacy matters to us</p>
             </div>
-            
-            <div class="privacy-modal-body">
-                <p>We use cookies and similar technologies to enhance your browsing experience, provide personalized content, and analyze our traffic. By continuing to use our website, you consent to our use of cookies and agree to our <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.</p>
-                
-                <div class="privacy-highlights">
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We protect your personal information</span>
-                    </div>
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We comply with Philippine Data Privacy Act</span>
-                    </div>
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We never sell your data to third parties</span>
-                    </div>
-                </div>
-                
-                <div class="privacy-actions">
-                    <button id="acceptPrivacy" class="btn btn-accept">
-                        <i class="fas fa-check me-2"></i>Accept All
-                    </button>
-                    <button id="declinePrivacy" class="btn btn-decline">
-                        <i class="fas fa-times me-2"></i>Decline
-                    </button>
-                </div>
+            <p class="consent__text">We use cookies to keep this site secure and to understand which pages customers use
+                most. We do not sell your data, and we comply with the Data Privacy Act of 2012.</p>
+            <label class="choice-check"><input type="checkbox"><span><span class="choice-check__label">Analytics
+                        cookies</span><span class="choice-check__desc">Helps us see which pages are hard to find.
+                        Optional.</span></span></label>
+            <div class="btn-row">
+                <button class="btn btn--primary" type="button" data-consent-accept><i class="fa-solid fa-check"
+                        aria-hidden="true"></i><span>Accept all</span></button>
+                <button class="btn btn--ghost" type="button" data-consent-accept><span>Essential only</span></button>
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap 5.3 JavaScript Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="assets/scripts/script.js"></script>
-    <script src="assets/scripts/privacy-modal.js"></script>
-    
-    <!-- Download Functionality -->
+    <script src="assets/scripts/site.js"></script>
     <script>
         function downloadReport(filename) {
             // Create the full path to the file
             const filePath = `assets/docs/${filename}`;
             console.log('Attempting to download:', filePath);
-            
+
             // Try direct download link first (works better with local files)
             const link = document.createElement('a');
             link.href = filePath;
             link.download = filename;
             link.target = '_blank';
-            
+
             // Test if file exists by trying to load it
             const testLink = document.createElement('a');
             testLink.href = filePath;
-            
+
             // Try to access the file
             fetch(filePath, { method: 'HEAD' })
                 .then(response => {
@@ -450,7 +255,7 @@
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
-                    
+
                     // Show success message (since we can't reliably detect file existence with file:// protocol)
                     setTimeout(() => {
                         showDownloadSuccess(filename);
@@ -468,9 +273,9 @@
                 <strong>Download Failed!</strong> The file "${filename}" was not found.
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             `;
-            
+
             document.body.appendChild(errorAlert);
-            
+
             // Auto-remove after 5 seconds
             setTimeout(() => {
                 if (errorAlert.parentNode) {
@@ -478,12 +283,12 @@
                 }
             }, 5000);
         }
-        
+
         function showDownloadSuccess(filename) {
             // Determine document type and year from filename
             const year = filename.match(/\d{4}/)?.[0];
             let docType = 'document';
-            
+
             if (filename.includes('Annual_Report') && year) {
                 docType = `Annual Report ${year}`;
             } else if (filename.includes('Personal_Loan_Form')) {
@@ -495,7 +300,7 @@
             } else {
                 docType = filename.replace(/\.pdf$/i, '').replace(/_/g, ' ');
             }
-            
+
             // Create and show a temporary success message
             const successAlert = document.createElement('div');
             successAlert.className = 'alert alert-success alert-dismissible fade show position-fixed';
@@ -505,9 +310,9 @@
                 <strong>Download Started!</strong> Your ${docType} is being downloaded.
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             `;
-            
+
             document.body.appendChild(successAlert);
-            
+
             // Auto-remove after 5 seconds
             setTimeout(() => {
                 if (successAlert.parentNode) {
