@@ -2,622 +2,367 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Branch Locations - Rural Bank of Digos</title>
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
-    <link href="assets/css/privacy-modal.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Branches — Rural Bank of Digos</title>
+    <meta name="description"
+        content="Five full-service branches and six satellite offices across Davao del Sur, Davao Occidental and North Cotabato.">
+    <link rel="icon" href="assets/img/logo-mark-navy.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-8">
-                        <div class="contact-info d-flex flex-wrap gap-3">
-                            <span><i class="fas fa-phone"></i> +082 553-4641</span>
-                            <span><i class="fas fa-envelope"></i> rbdigos@rbap.org</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Digos - Makar Rd</span>
+
+    <header class="site-header">
+        <div class="utilbar">
+            <div class="wrap">
+                <span><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+0825534641"
+                        style="color:inherit">+082 553-4641</a></span>
+                <span><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:rbdigos@rbap.org"
+                        style="color:inherit">rbdigos@rbap.org</a></span>
+                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Rizal Ave, Digos City</span>
+                <span class="utilbar__pdic"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Deposits insured
+                    by PDIC up to &#8369;1,000,000</span>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="wrap">
+                <a class="logo" href="index.html"><img src="assets/img/logo-navy.png" alt="Rural Bank of Digos"></a>
+                <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><i
+                        class="fa-solid fa-bars" aria-hidden="true"></i></button>
+                <nav class="nav" aria-label="Main">
+                    <a class="nav-link" href="index.html"><i class="fa-solid fa-house"
+                            aria-hidden="true"></i><span>Home</span></a>
+                    <a class="nav-link" href="services.html"><i class="fa-solid fa-briefcase"
+                            aria-hidden="true"></i><span>Services</span></a>
+                    <a class="nav-link is-active" href="branches.html" aria-current="page"><i
+                            class="fa-solid fa-building-columns" aria-hidden="true"></i><span>Branches</span></a>
+                    <a class="nav-link" href="reports.html"><i class="fa-solid fa-chart-column"
+                            aria-hidden="true"></i><span>Reports</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <section class="section section--sunken section--tight">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-building-columns" aria-hidden="true"></i>Branches</span>
+                    <h1 class="sec-title">Eleven offices across three provinces</h1>
+                    <p class="sec-sub">Five full-service branches and six satellite offices in Davao del Sur, Davao
+                        Occidental and North Cotabato.</p>
+                </div>
+                <div style="max-width:460px">
+                    <div class="field">
+                        <label class="field-label" for="office-search">Search by town or office</label>
+                        <div class="control"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input
+                                class="input" id="office-search" type="search"
+                                placeholder="Try &ldquo;Kidapawan&rdquo; or &ldquo;Mlang&rdquo;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-building-columns" aria-hidden="true"></i>Full
+                        service</span>
+                    <h2 class="sec-title">Branches</h2>
+                    <p class="sec-sub">Deposits, loans, remittance and account servicing.</p>
+                </div>
+                <div>
+                    <div class="grid grid--3" data-offices="branches">
+                        <article class="branch" data-office="MAIN BRANCH Rizal Avenue, Digos City, Davao del Sur 8002">
+                            <span class="branch__kind">Main branch</span>
+                            <h3 class="branch__name">MAIN BRANCH</h3>
+                            <p class="branch__desc">Our flagship office in Digos City, serving the community since 1956.
+                            </p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>Rizal Avenue, Digos City, Davao del Sur
+                                        8002</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0825533606">+082 553-3606</a></span>
+                            </div>
+                        </article>
+                        <article class="branch" data-office="BANSALAN BRANCH J. Viacrusis St., Bansalan, Davao del Sur">
+                            <span class="branch__kind">Branch office</span>
+                            <h3 class="branch__name">BANSALAN BRANCH</h3>
+                            <p class="branch__desc">Full-service branch for Bansalan and the surrounding barangays.</p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>J. Viacrusis St., Bansalan, Davao del
+                                        Sur</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0825539253">+082 553-9253</a></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0822760700">+082 276-0700</a></span>
+                            </div>
+                        </article>
+                        <article class="branch" data-office="KIDAPAWAN BRANCH Quezon Boulevard, Kidapawan City">
+                            <span class="branch__kind">Branch office</span>
+                            <h3 class="branch__name">KIDAPAWAN BRANCH</h3>
+                            <p class="branch__desc">Serving Kidapawan City and upland North Cotabato.</p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>Quezon Boulevard, Kidapawan City</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0822760513">+082 276-0513</a></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0645775145">+064 577-5145</a></span>
+                            </div>
+                        </article>
+                        <article class="branch" data-office="MALITA BRANCH Malita, Davao Occidental">
+                            <span class="branch__kind">Branch office</span>
+                            <h3 class="branch__name">MALITA BRANCH</h3>
+                            <p class="branch__desc">Full banking services for Malita and Davao Occidental.</p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>Malita, Davao Occidental</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0822760280">+082 276-0280</a></span>
+                            </div>
+                        </article>
+                        <article class="branch" data-office="ANTIPAS BRANCH Antipas, North Cotabato">
+                            <span class="branch__kind">Branch office</span>
+                            <h3 class="branch__name">ANTIPAS BRANCH</h3>
+                            <p class="branch__desc">Comprehensive banking for Antipas and North Cotabato.</p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>Antipas, North Cotabato</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0822760514">+082 276-0514</a></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0645230004">+064 523-0004</a></span>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="empty" data-empty hidden></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--subtle section--tight">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-store" aria-hidden="true"></i>Satellite offices</span>
+                    <h2 class="sec-title">Community banking centres</h2>
+                    <p class="sec-sub">Deposits, withdrawals, loan collection and enquiries.</p>
+                </div>
+                <div>
+                    <div class="grid grid--3" data-offices="satellites">
+                        <article class="branch" data-office="DON MARCELINO Kananga, Don Marcelino, Davao Occidental">
+                            <span class="branch__kind">Satellite office</span>
+                            <h3 class="branch__name">DON MARCELINO</h3>
+                            <p class="branch__desc">Essential banking services for the community.</p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>Kananga, Don Marcelino, Davao
+                                        Occidental</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0822760280">+082 276-0280</a></span>
+                            </div>
+                        </article>
+                        <article class="branch" data-office="JOSE ABAD SANTOS Caburan Bldg, JAS, Davao Occidental">
+                            <span class="branch__kind">Satellite office</span>
+                            <h3 class="branch__name">JOSE ABAD SANTOS</h3>
+                            <p class="branch__desc">Essential banking services for the community.</p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>Caburan Bldg, JAS, Davao Occidental</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0822760280">+082 276-0280</a></span>
+                            </div>
+                        </article>
+                        <article class="branch" data-office="KAPATAGAN Purok 3 Mt. Apo, Kapatagan, Digos City">
+                            <span class="branch__kind">Satellite office</span>
+                            <h3 class="branch__name">KAPATAGAN</h3>
+                            <p class="branch__desc">Essential banking services for the community.</p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>Purok 3 Mt. Apo, Kapatagan, Digos
+                                        City</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0825533606">+082 553-3606</a></span>
+                            </div>
+                        </article>
+                        <article class="branch" data-office="ARAKAN Pob. Arakan, North Cotabato">
+                            <span class="branch__kind">Satellite office</span>
+                            <h3 class="branch__name">ARAKAN</h3>
+                            <p class="branch__desc">Essential banking services for the community.</p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>Pob. Arakan, North Cotabato</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0649097184917">+064 909 718-4917</a></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0649510213200">+064 951 021-3200</a></span>
+                            </div>
+                        </article>
+                        <article class="branch" data-office="STA MARIA Pob. Sta Maria, Davao Occidental">
+                            <span class="branch__kind">Satellite office</span>
+                            <h3 class="branch__name">STA MARIA</h3>
+                            <p class="branch__desc">Essential banking services for the community.</p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>Pob. Sta Maria, Davao Occidental</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0822760280">+082 276-0280</a></span>
+                                <span class="branch__line"><i class="fa-solid fa-clock"
+                                        aria-hidden="true"></i><span>Mon–Fri: 8:00 AM – 4:00 PM</span></span>
+                            </div>
+                        </article>
+                        <article class="branch" data-office="MLANG Pidot St., Pob. Mlang, North Cotabato">
+                            <span class="branch__kind">Satellite office</span>
+                            <h3 class="branch__name">MLANG</h3>
+                            <p class="branch__desc">Essential banking services for the community.</p>
+                            <div class="branch__lines">
+                                <span class="branch__line"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i><span>Pidot St., Pob. Mlang, North Cotabato</span></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0645775145">+064 577-5145</a></span>
+                                <span class="branch__line"><i class="fa-solid fa-phone" aria-hidden="true"></i><a
+                                        href="tel:+0639853281537">+063 985 328-1537</a></span>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="empty" data-empty hidden></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-clock" aria-hidden="true"></i>Before you travel</span>
+                    <h2 class="sec-title">Banking hours &amp; service notes</h2>
+                </div>
+                <div class="grid grid--2" style="align-items:start">
+                    <div class="card card--raised card--flush">
+                        <div class="rate rate--head"><span class="rate__label">Office</span><span
+                                class="rate__value">Banking hours</span><span class="rate__unit"></span></div>
+                        <div class="rate"><span class="rate__label">All branches<span class="rate__sub">Digos, Bansalan,
+                                    Kidapawan, Malita, Antipas</span></span><span
+                                class="rate__value">9:00–5:00</span><span class="rate__unit">Mon–Fri</span></div>
+                        <div class="rate"><span class="rate__label">Satellite offices<span class="rate__sub">except Sta
+                                    Maria</span></span><span class="rate__value">9:00–5:00</span><span
+                                class="rate__unit">Mon–Fri</span></div>
+                        <div class="rate"><span class="rate__label">Sta Maria<span class="rate__sub">Davao
+                                    Occidental</span></span><span class="rate__value">8:00–4:00</span><span
+                                class="rate__unit">Mon–Fri<span class="rate__note">as of 01 Aug 2026</span></span></div>
+                    </div>
+                    <div class="stack">
+                        <div class="alert alert--warning">
+                            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3 class="alert__title">Holiday closures</h3>
+                                <p class="alert__body">All offices are closed on national and local holidays. Check the
+                                    advisories before travelling on a long weekend.</p>
+                            </div>
+                        </div>
+                        <div class="card card--sunken">
+                            <h3 class="card-title">Head office</h3>
+                            <p class="card-text">Rural Bank of Digos, Inc. &middot; Rizal Avenue, Digos City, Davao del
+                                Sur 8002<br>+082 553-4641 &middot; rbdigos@rbap.org</p>
+                            <div style="margin-top:16px"><a class="btn btn--outline btn--sm" href="tel:+0825534641"><i
+                                        class="fa-solid fa-phone" aria-hidden="true"></i><span>Call the head
+                                        office</span></a></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <nav class="navbar navbar-expand-lg modern-nav">
-            <div class="container">
-                <div class="logo navbar-brand">
-                     <img src="assets/images/old-logo-tagline-white.png" alt="Rural Bank of Digos Logo" class="logo-image">
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="assets/images/logo-white.png" alt="Rural Bank of Digos">
+                    <p class="footer__blurb">Rural Bank of Digos, Inc. has served Davao del Sur, Davao Occidental and
+                        North Cotabato since 1956.</p>
+                    <div><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"
+                                aria-hidden="true"></i></a></div>
                 </div>
-
-                <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="toggler-line"></span>
-                    <span class="toggler-line"></span>
-                    <span class="toggler-line"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto modern-nav-menu">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#home">
-                                <i class="fas fa-home nav-icon"></i>
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="reports.html">
-                                <i class="fas fa-chart-bar nav-icon"></i>
-                                <span>Reports</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="branches.html">
-                                <i class="fas fa-building nav-icon"></i>
-                                <span>Branches</span>
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="contact.html">
-                                <i class="fas fa-phone nav-icon"></i>
-                                <span>Contact</span>
-                            </a>
-                        </li> -->
+                <div class="footer__col">
+                    <h2>Bank with us</h2>
+                    <ul>
+                        <li><a href="services.html">Savings account</a></li>
+                        <li><a href="services.html">Checking account</a></li>
+                        <li><a href="services.html">Basic deposit account</a></li>
+                        <li><a href="services.html">Time deposit</a></li>
+                        <li><a href="services.html">Loan accounts</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="footer__col">
+                    <h2>About RBDigos</h2>
+                    <ul>
+                        <li><a href="#">Our story</a></li>
+                        <li><a href="#">Board &amp; management</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="index.html#advisories">News &amp; advisories</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer__col">
+                    <h2>Transparency</h2>
+                    <ul>
+                        <li><a href="reports.html">Annual reports</a></li>
+                        <li><a href="reports.html">Balance sheets</a></li>
+                        <li><a href="reports.html">Forms &amp; documents</a></li>
+                        <li><a href="privacy-policy.html">Privacy notice</a></li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Main Branches Section -->
-    <section class="branches py-5" id="main-branches">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <div class="section-badge">
-                        <i class="fas fa-university"></i>
-                        <span>Branches</span>
-                    </div>
-                    <h2 class="section-title">Full-Service Banking Locations</h2>
-                    <p class="section-subtitle">Complete banking services with experienced staff and modern facilities</p>
-                </div>
+            <div class="footer__legal">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                <p>Rural Bank of Digos, Inc. is regulated by the Bangko Sentral ng Pilipinas. Deposits are insured by
+                    the PDIC up to &#8369;1,000,000 per depositor. For concerns, contact us at <strong>+082
+                        553-4641</strong> or <strong>rbdigos@rbap.org</strong>. BSP Consumer Assistance: (02) 8708-7087,
+                    consumeraffairs@bsp.gov.ph.</p>
             </div>
-
-            <div class="row g-4 mb-5">
-                <!-- Main Branch Card -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern loans">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag loans">Main Branch</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">MAIN BRANCH</h3>
-                            <p class="service-description">Our flagship location in Digos City serving the community since 1956.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Rizal Avenue, Digos City, Davao del Sur, Philippines 8002</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+082 553-3606</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="tel:+0825533606" class="service-btn loans">
-                                <span>Call Now</span>
-                                <i class="fas fa-phone"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bansalan Branch -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern loans">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag loans">Branch Office</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">BANSALAN BRANCH</h3>
-                            <p class="service-description">Full-service branch serving the Bansalan community and surrounding areas.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>J. Viacrusis ST., Bansalan Davao del Sur</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+082 553-9253 / +082 276-0700</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="tel:+0825539253" class="service-btn loans">
-                                <span>Call Now</span>
-                                <i class="fas fa-phone"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kidapawan Branch -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern loans">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag loans">Branch Office</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">KIDAPAWAN BRANCH</h3>
-                            <p class="service-description">Strategic branch location providing banking services to Kidapawan City residents.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Quezon Boulevard, Kidapawan City</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+082 276-0513 / +064 577-5145</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="tel:+0822760513" class="service-btn loans">
-                                <span>Call Now</span>
-                                <i class="fas fa-phone"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <!-- Malita Branch -->
-                <div class="col-lg-4 col-md-6 offset-lg-2">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern loans">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag loans">Branch Office</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">MALITA BRANCH</h3>
-                            <p class="service-description">Strategic branch serving Malita and Davao Occidental communities with full banking services.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Malita, Davao Occidental</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+082 276-0280</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="tel:+0822760280" class="service-btn loans">
-                                <span>Call Now</span>
-                                <i class="fas fa-phone"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Antipas Branch -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern loans">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag loans">Branch Office</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">ANTIPAS BRANCH</h3>
-                            <p class="service-description">Full-service branch providing comprehensive banking solutions to North Cotabato residents.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Antipas, North Cotabato</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+082 276-0514 / +064 523-0004</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="tel:+0822760514" class="service-btn loans">
-                                <span>Call Now</span>
-                                <i class="fas fa-phone"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Satellite Offices Section -->
-    <section class="satellite-offices py-5" id="satellite-offices">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <div class="section-badge">
-                        <i class="fas fa-store"></i>
-                        <span>Satellite Offices</span>
-                    </div>
-                    <h2 class="section-title">Community Banking Centers</h2>
-                    <p class="section-subtitle">Conveniently located to serve you better across the region with essential banking services</p>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <!-- Satellite Office 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern personal">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag personal">Satellite Office</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">DON MARCELINO</h3>
-                            <p class="service-description">Satellite office providing essential banking services to Don Marcelino community.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Kananga, Don Marcelino Davao Occidental</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+082 276-0280</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Satellite Office 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern personal">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag personal">Satellite Office</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">JOSE ABAD SANTOS</h3>
-                            <p class="service-description">Community banking office serving Jose Abad Santos and surrounding areas.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Caburan Blg, JAS Davao Occidental</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+082 276-0280</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Satellite Office 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern personal">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag personal">Satellite Office</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">KAPATAGAN</h3>
-                            <p class="service-description">Local banking services for the Kapatagan community in Digos City.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Purok 3 Mt. Apo, Kapatagan Digos City, Davao Del Sur</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+082 553-3606</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Satellite Office 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern personal">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag personal">Satellite Office</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">ARAKAN</h3>
-                            <p class="service-description">Community banking services for Arakan and North Cotabato residents.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Pob. Arakan North Cotabato</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+064 909 718-4917 / +064 951 021-3200</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Satellite Office 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern personal">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag personal">Satellite Office</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">STA MARIA</h3>
-                            <p class="service-description">Local banking office serving Santa Maria and Davao Occidental communities.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Pob. Sta Maria, Davao Occidental</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+082 276-0280</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 8:00 AM - 4:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Satellite Office 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="modern-service-card h-100">
-                        <div class="card-header">
-                            <div class="service-icon-modern personal">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="service-category">
-                                <span class="category-tag personal">Satellite Office</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="service-title">MLANG</h3>
-                            <p class="service-description">Community banking services for Mlang residents with multiple contact options.</p>
-                            <div class="service-benefits">
-                                <div class="benefit-list">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Pidot St., Pob. Mlang</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-phone"></i>
-                                        <span>+064 577-5145 / +063 985 328-1537</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Quick Links</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="index.html#home" class="text-decoration-none">Home</a></li>
-                            <!-- <li class="mb-2"><a href="index.html#products" class="text-decoration-none">Services</a></li>
-                            <li class="mb-2"><a href="index.html#news" class="text-decoration-none">News</a></li>
-                            <li class="mb-2"><a href="index.html#foreclosed" class="text-decoration-none">Properties</a></li> -->
-                            <li class="mb-2"><a href="index.html#reports" class="text-decoration-none">Reports</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Services</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Savings Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Checking Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Basic Deposit Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Time Deposit Account</a></li>
-                            <li class="mb-2"><a href="#" class="text-decoration-none">Loan Account</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-section">
-                        <h4 class="mb-3">Connect With Us</h4>
-                        <p>Stay updated with the latest financial news and services.</p>
-                        <div class="social-icons d-flex gap-2 mt-3">
-                            <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom border-top pt-3 text-center">
-                <p class="mb-0">&copy; 2025 RBDI. All rights reserved. | <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a> | Terms of Service | PDIC Insured</p>
+            <div class="footer__base">
+                <span>&copy; 2026 Rural Bank of Digos, Inc. All rights reserved.</span>
+                <nav aria-label="Legal">
+                    <a href="privacy-policy.html">Privacy notice</a>
+                    <a href="#">Terms of service</a>
+                    <a href="#">Sitemap</a>
+                </nav>
             </div>
         </div>
     </footer>
 
-    <!-- Privacy Policy Acceptance Dialog -->
-    <div id="privacyModal" class="privacy-modal">
-        <div class="privacy-modal-content">
-            <div class="privacy-modal-header">
-                <div class="privacy-icon">
-                    <i class="fas fa-shield-check"></i>
+    <div class="consent" id="consent" role="dialog" aria-modal="true" aria-labelledby="consent-title" hidden>
+        <div class="consent__box">
+            <div class="consent__head">
+                <span class="consent__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+                <div>
+                    <h2 class="consent__title" id="consent-title">Privacy Notice &amp; Cookie Policy</h2>
+                    <p class="consent__sub">Your privacy matters to us</p>
                 </div>
-                <h3>Privacy Policy & Cookie Notice</h3>
-                <p class="privacy-subtitle">Your privacy matters to us</p>
             </div>
-            
-            <div class="privacy-modal-body">
-                <p>We use cookies and similar technologies to enhance your browsing experience, provide personalized content, and analyze our traffic. By continuing to use our website, you consent to our use of cookies and agree to our <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.</p>
-                
-                <div class="privacy-highlights">
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We protect your personal information</span>
-                    </div>
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We comply with Philippine Data Privacy Act</span>
-                    </div>
-                    <div class="privacy-highlight-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>We never sell your data to third parties</span>
-                    </div>
-                </div>
-                
-                <div class="privacy-actions">
-                    <button id="acceptPrivacy" class="btn btn-accept">
-                        <i class="fas fa-check me-2"></i>Accept All
-                    </button>
-                    <button id="declinePrivacy" class="btn btn-decline">
-                        <i class="fas fa-times me-2"></i>Decline
-                    </button>
-                </div>
+            <p class="consent__text">We use cookies to keep this site secure and to understand which pages customers use
+                most. We do not sell your data, and we comply with the Data Privacy Act of 2012.</p>
+            <label class="choice-check"><input type="checkbox"><span><span class="choice-check__label">Analytics
+                        cookies</span><span class="choice-check__desc">Helps us see which pages are hard to find.
+                        Optional.</span></span></label>
+            <div class="btn-row">
+                <button class="btn btn--primary" type="button" data-consent-accept><i class="fa-solid fa-check"
+                        aria-hidden="true"></i><span>Accept all</span></button>
+                <button class="btn btn--ghost" type="button" data-consent-accept><span>Essential only</span></button>
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap 5.3 JavaScript Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="assets/scripts/script.js"></script>
-    <script src="assets/scripts/privacy-modal.js"></script>
+    <script src="assets/scripts/site.js"></script>
 </body>
 
 </html>
