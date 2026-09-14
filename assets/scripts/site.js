@@ -144,4 +144,161 @@
     carouselGoTo(0);
     carouselPlay();
   }
+
+  /* ---- News & advisories: shared article data (see assets/scripts/articles.js) ---- */
+  var articles = window.RBD_ARTICLES || [];
+
+  function queryParam(name) {
+    var m = new RegExp("[?&]" + name + "=([^&]*)").exec(window.location.search);
+    return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+  }
+  function findArticle(id) {
+    for (var i = 0; i < articles.length; i++) {
+      if (articles[i].id === id) return articles[i];
+    }
+    return null;
+  }
+  function articleUrl(article) {
+    return "article.html?id=" + encodeURIComponent(article.id);
+  }
+  /* Text always goes in via textContent, so article copy is never parsed as markup. */
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text) node.textContent = text;
+    return node;
+  }
+  function icon(name) {
+    var i = document.createElement("i");
+    i.className = name;
+    i.setAttribute("aria-hidden", "true");
+    return i;
+  }
+  /* Filenames from article data must be bare names, so links stay inside their asset folder. */
+  function safeFile(name) {
+    if (typeof name !== "string" || !name) return "";
+    if (/[\/\\]/.test(name) || name.indexOf("..") !== -1) return "";
+    return name;
+  }
+
+  /* ---- Newsletter: advisory list ---- */
+  var articleList = document.querySelector("[data-article-list]");
+  if (articleList) {
+    Array.prototype.forEach.call(articles, function (article) {
+      var card = el("article", "notice");
+
+      var meta = el("div", "notice__meta");
+      meta.appendChild(el("span", "tag " + (article.tagClass || "tag--notice"), article.tag));
+      var date = el("time", "notice__date", article.date);
+      if (article.iso) date.setAttribute("datetime", article.iso);
+      meta.appendChild(date);
+
+      var body = document.createElement("div");
+      body.appendChild(el("h3", "notice__title", article.title));
+      body.appendChild(el("p", "notice__summary", article.summary));
+      var more = el("a", "notice__more", "Read more");
+      more.href = articleUrl(article);
+      more.appendChild(icon("fa-solid fa-arrow-right"));
+      body.appendChild(more);
+
+      card.appendChild(meta);
+      card.appendChild(body);
+      articleList.appendChild(card);
+    });
+    var listEmpty = articleList.querySelector("[data-article-empty]");
+    if (listEmpty) listEmpty.hidden = articles.length !== 0;
+  }
+
+  /* ---- Article detail: renders whichever article.html?id=... was asked for ---- */
+  var articleBody = document.querySelector("[data-article-body]");
+  if (articleBody) {
+    var current = findArticle(queryParam("id"));
+    var artHead = document.querySelector("[data-article-head]");
+    var artMain = document.querySelector("[data-article-main]");
+    var missHead = document.querySelector("[data-article-missing-head]");
+    var missMain = document.querySelector("[data-article-missing]");
+
+    if (!current) {
+      /* The requested id is only ever compared, never written back into the page. */
+      if (missHead) missHead.hidden = false;
+      if (missMain) missMain.hidden = false;
+      document.title = "Article not found \u2014 Rural Bank of Digos";
+    } else {
+      var artTag = document.querySelector("[data-article-tag]");
+      var artDate = document.querySelector("[data-article-date]");
+      var artTitle = document.querySelector("[data-article-title]");
+      var artSummary = document.querySelector("[data-article-summary]");
+
+      if (artTag) {
+        artTag.className = "tag " + (current.tagClass || "tag--notice");
+        artTag.textContent = current.tag;
+      }
+      if (artDate) {
+        artDate.textContent = current.date;
+        if (current.iso) artDate.setAttribute("datetime", current.iso);
+      }
+      if (artTitle) artTitle.textContent = current.title;
+      if (artSummary) artSummary.textContent = current.summary;
+
+      var hero = document.querySelector("[data-article-hero]");
+      var bannerFile = current.banner && safeFile(current.banner.file);
+      if (hero && bannerFile) {
+        var bannerSrc = "assets/images/articles/" + encodeURIComponent(bannerFile);
+        /* Preload first: a missing image leaves the plain header rather than a half-styled one. */
+        var probe = new Image();
+        probe.onload = function () {
+          hero.style.setProperty("--hero-hw", (probe.naturalHeight / probe.naturalWidth).toFixed(4));
+          hero.style.backgroundImage = "url(\"" + bannerSrc + "\")";
+          hero.classList.add("article-hero");
+        };
+        probe.src = bannerSrc;
+      }
+
+      Array.prototype.forEach.call(current.body || [], function (block) {
+        if (block.type === "p" || block.type === "h2") {
+          articleBody.appendChild(el(block.type, "", block.text));
+          return;
+        }
+        if (block.type === "ul") {
+          var list = el("ul", "checklist");
+          Array.prototype.forEach.call(block.items || [], function (item) {
+            var li = document.createElement("li");
+            li.appendChild(icon("fa-solid fa-check"));
+            li.appendChild(el("span", "", item));
+            list.appendChild(li);
+          });
+          articleBody.appendChild(list);
+        }
+        /* Unknown block types are skipped rather than thrown on. */
+      });
+
+      var downloads = document.querySelector("[data-article-downloads]");
+      var downloadList = document.querySelector("[data-article-download-list]");
+      if (downloads && downloadList) {
+        Array.prototype.forEach.call(current.attachments || [], function (item) {
+          var file = item && safeFile(item.file);
+          if (!file) return;
+          var link = el("a", "dl");
+          link.href = "assets/docs/" + encodeURIComponent(file);
+          link.setAttribute("download", file);
+          var fileIcon = el("span", "dl__icon");
+          fileIcon.appendChild(icon(/\.pdf$/i.test(file) ? "fa-solid fa-file-pdf" : "fa-solid fa-file-lines"));
+          link.appendChild(fileIcon);
+          link.appendChild(el("span", "dl__title", item.label || file));
+          var action = el("span", "dl__action");
+          action.appendChild(el("span", "", "Download"));
+          action.appendChild(icon("fa-solid fa-download"));
+          link.appendChild(action);
+          downloadList.appendChild(link);
+        });
+        downloads.hidden = downloadList.children.length === 0;
+      }
+
+      if (artHead) artHead.hidden = false;
+      if (artMain) artMain.hidden = false;
+      document.title = current.title + " \u2014 Rural Bank of Digos";
+      var desc = document.querySelector("meta[name=\"description\"]");
+      if (desc) desc.setAttribute("content", current.summary || "");
+    }
+  }
 })();

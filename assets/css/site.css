@@ -262,6 +262,7 @@ img{max-width:100%;display:block}
 .section--brand{background:var(--gradient-brand);color:#fff}
 .section--tight{padding:var(--section-y-tight) 0}
 .sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:40px;max-width:720px}
+.sec-head[hidden]{display:none}
 .sec-head--center{align-items:center;text-align:center;margin-left:auto;margin-right:auto}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font:var(--type-eyebrow);letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--brand-blue-500)}
 .section--brand .eyebrow{color:var(--brand-blue-200)}
@@ -276,6 +277,7 @@ img{max-width:100%;display:block}
 .grid--3{grid-template-columns:repeat(3,1fr)}
 .grid--4{grid-template-columns:repeat(4,1fr)}
 .stack{display:flex;flex-direction:column;gap:var(--stack-gap)}
+.stack[hidden]{display:none}
 .split{display:grid;gap:32px;align-items:start}
 .split--wide-left{grid-template-columns:1.4fr .9fr}
 
@@ -405,6 +407,23 @@ img{max-width:100%;display:block}
 .notice__date{font:var(--fw-medium) var(--text-2xs)/1 var(--font-mono);color:var(--text-muted)}
 .notice__title{font:var(--fw-semibold) var(--text-base)/1.3 var(--font-display);color:var(--brand-navy-900)}
 .notice__summary{margin-top:6px;font:var(--type-body-sm);color:var(--text-muted)}
+.notice__more{margin-top:12px;display:inline-flex;align-items:center;gap:8px;font:var(--type-label);color:var(--brand-blue-600)}
+.notice__more i{font-size:12px;transition:transform var(--dur-base) var(--ease-standard)}
+.notice__more:hover{text-decoration:none}
+.notice__more:hover i{transform:translateX(3px)}
+
+/* ---------- Article detail ---------- */
+.backlink{display:inline-flex;align-items:center;gap:8px;font:var(--type-label);color:var(--brand-blue-600)}
+.backlink:hover{text-decoration:none}
+.article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.prose{display:flex;flex-direction:column;gap:18px;font:var(--type-body);color:var(--text-body)}
+.prose h2{font:var(--type-h4);color:var(--brand-navy-900);margin-top:10px}
+/* Article header with a banner background: sized from the image so the banner shows on wide screens.
+   --hero-fit trims the height: 1 shows the whole image, lower is shorter (below ~.90 the CEC banner's logos and taglines get cut). */
+.article-hero{--hero-fit:.92;position:relative;display:flex;flex-direction:column;justify-content:center;min-height:calc(100vw * var(--hero-hw) * var(--hero-fit));background-size:cover;background-position:center 58%;background-repeat:no-repeat}
+.article-hero::before{content:"";position:absolute;inset:0;background:var(--surface-sunken);opacity:0;pointer-events:none}
+.article-hero > .wrap{position:relative;width:100%}
+.article-hero .sec-head{margin-bottom:0}
 
 /* ---------- Alert ---------- */
 .alert{display:flex;gap:14px;padding:20px 22px;border-radius:var(--radius-md);border-left:4px solid transparent}
@@ -521,6 +540,11 @@ img{max-width:100%;display:block}
 .anniv__video{display:block;width:100%;height:auto;aspect-ratio:1280/506}
 .anniv__caption{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--radius-pill);background:rgba(4,51,122,.72);backdrop-filter:blur(6px);font:var(--type-label);color:#fff}
 
+@media (max-width:1440px){
+/* Too narrow for the text to sit between the banner's logos and tagline band: normal height, faded image. */
+.article-hero{min-height:0}
+.article-hero::before{opacity:.82}
+}
 @media (max-width:1000px){
 .anniv__grid{grid-template-columns:1fr;gap:40px}
 .anniv__numeral{font-size:32vh;bottom:-6vh}

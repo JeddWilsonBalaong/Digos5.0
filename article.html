@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Newsletter & Advisories — Rural Bank of Digos</title>
+    <title>News &amp; advisories — Rural Bank of Digos</title>
     <meta name="description" content="Announcements, advisories and service notices from Rural Bank of Digos.">
     <link rel="icon" href="assets/images/logo-mark-navy.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,38 +52,51 @@
     </header>
     <main>
 
-        <section class="section section--sunken section--tight">
+        <section class="section section--sunken section--tight" data-article-hero>
             <div class="wrap">
-                <div class="sec-head">
-                    <span class="eyebrow"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i>Advisories</span>
-                    <h1 class="sec-title">News &amp; advisories</h1>
-                    <p class="sec-sub">Announcements, holiday schedules and service notices — updated as they are
-                        issued.</p>
+                <a class="backlink" href="newsletter.html"><i class="fa-solid fa-arrow-left"
+                        aria-hidden="true"></i>News &amp; advisories</a>
+                <div class="sec-head" data-article-head style="margin-top:16px" hidden>
+                    <div class="article-meta">
+                        <span class="tag tag--notice" data-article-tag></span>
+                        <time class="notice__date" data-article-date></time>
+                    </div>
+                    <h1 class="sec-title" data-article-title></h1>
+                    <p class="sec-sub" data-article-summary></p>
                 </div>
+                <div class="sec-head" data-article-missing-head style="margin-top:16px" hidden>
+                    <span class="eyebrow"><i class="fa-solid fa-circle-question"
+                            aria-hidden="true"></i>Not found</span>
+                    <h1 class="sec-title">We could not find that article</h1>
+                    <p class="sec-sub">The advisory you asked for is no longer posted, or the link was mistyped.</p>
+                </div>
+                <div class="stack" data-article-missing hidden>
+                    <p class="empty">Please head back to the newsletter for the advisories we have posted.</p>
+                    <div><a class="btn btn--primary" href="newsletter.html"><i class="fa-solid fa-newspaper"
+                                aria-hidden="true"></i><span>View news &amp; advisories</span></a></div>
+                </div>
+                <noscript>
+                    <p class="empty" style="margin-top:16px">Enable JavaScript to read this advisory, or call your
+                        branch on +082 553-4641.</p>
+                </noscript>
             </div>
         </section>
 
-        <section class="section section--tight" id="advisories">
+        <section class="section section--tight" data-article-main hidden>
             <div class="wrap">
                 <div class="split split--wide-left">
-                    <div class="stack" style="gap:12px" data-article-list>
-                        <p class="empty" data-article-empty hidden>No advisories at the moment.</p>
-                        <noscript>
-                            <p class="empty">Enable JavaScript to view current advisories, or call your branch on
-                                +082 553-4641.</p>
-                        </noscript>
+                    <div class="stack">
+                        <div class="prose" data-article-body></div>
+                        <div class="panel" data-article-downloads hidden>
+                            <h2 class="card-title">Downloads</h2>
+                            <div class="panel__list" data-article-download-list></div>
+                        </div>
+                        <div><a class="backlink" href="newsletter.html"><i class="fa-solid fa-arrow-left"
+                                    aria-hidden="true"></i>Back to news &amp; advisories</a></div>
                     </div>
                     <div class="stack">
-                        <!-- <div class="alert alert--danger">
-                            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
-                            <div>
-                                <h3 class="alert__title">RBDigos will never ask for your OTP</h3>
-                                <p class="alert__body">Not by SMS, not by email, not by phone. If someone does, hang up
-                                    and call your branch on the number printed on this site.</p>
-                            </div>
-                        </div> -->
                         <div class="card card--sunken">
-                            <h3 class="card-title">Consumer assistance</h3>
+                            <h2 class="card-title">Consumer assistance</h2>
                             <p class="card-text">Unresolved concern? Contact us at <strong>+082 553-4641</strong> or
                                 <strong>rbdigos@rbap.org</strong>. You may also reach BSP Consumer Affairs at (02)
                                 8708-7087.</p>
