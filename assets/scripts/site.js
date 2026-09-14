@@ -145,23 +145,18 @@
     carouselPlay();
   }
 
-  /* ---- News & advisories: shared article data (see assets/scripts/articles.js) ---- */
-  var articles = window.RBD_ARTICLES || [];
-
+  /* ---- Shared helpers for data-driven pages (articles.js, properties.js) ---- */
   function queryParam(name) {
     var m = new RegExp("[?&]" + name + "=([^&]*)").exec(window.location.search);
     return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
   }
-  function findArticle(id) {
-    for (var i = 0; i < articles.length; i++) {
-      if (articles[i].id === id) return articles[i];
+  function findById(list, id) {
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].id === id) return list[i];
     }
     return null;
   }
-  function articleUrl(article) {
-    return "article.html?id=" + encodeURIComponent(article.id);
-  }
-  /* Text always goes in via textContent, so article copy is never parsed as markup. */
+  /* Text always goes in via textContent, so data-file copy is never parsed as markup. */
   function el(tag, className, text) {
     var node = document.createElement(tag);
     if (className) node.className = className;
@@ -174,11 +169,59 @@
     i.setAttribute("aria-hidden", "true");
     return i;
   }
-  /* Filenames from article data must be bare names, so links stay inside their asset folder. */
+  /* Filenames from data files must be bare names, so links stay inside their asset folder. */
   function safeFile(name) {
     if (typeof name !== "string" || !name) return "";
     if (/[\/\\]/.test(name) || name.indexOf("..") !== -1) return "";
     return name;
+  }
+  /* Body blocks: { type: "p" | "h2", text } and { type: "ul", items }. */
+  function renderBlocks(container, blocks) {
+    Array.prototype.forEach.call(blocks || [], function (block) {
+      if (block.type === "p" || block.type === "h2") {
+        container.appendChild(el(block.type, "", block.text));
+        return;
+      }
+      if (block.type === "ul") {
+        var list = el("ul", "checklist");
+        Array.prototype.forEach.call(block.items || [], function (item) {
+          var li = document.createElement("li");
+          li.appendChild(icon("fa-solid fa-check"));
+          li.appendChild(el("span", "", item));
+          list.appendChild(li);
+        });
+        container.appendChild(list);
+      }
+      /* Unknown block types are skipped rather than thrown on. */
+    });
+  }
+  /* Download rows for files in assets/docs/; the panel stays hidden when nothing valid is listed. */
+  function renderAttachments(section, list, items) {
+    if (!section || !list) return;
+    Array.prototype.forEach.call(items || [], function (item) {
+      var file = item && safeFile(item.file);
+      if (!file) return;
+      var link = el("a", "dl");
+      link.href = "assets/docs/" + encodeURIComponent(file);
+      link.setAttribute("download", file);
+      var fileIcon = el("span", "dl__icon");
+      fileIcon.appendChild(icon(/\.pdf$/i.test(file) ? "fa-solid fa-file-pdf" : "fa-solid fa-file-lines"));
+      link.appendChild(fileIcon);
+      link.appendChild(el("span", "dl__title", item.label || file));
+      var action = el("span", "dl__action");
+      action.appendChild(el("span", "", "Download"));
+      action.appendChild(icon("fa-solid fa-download"));
+      link.appendChild(action);
+      list.appendChild(link);
+    });
+    section.hidden = list.children.length === 0;
+  }
+
+  /* ---- News & advisories: shared article data (see assets/scripts/articles.js) ---- */
+  var articles = window.RBD_ARTICLES || [];
+
+  function articleUrl(article) {
+    return "article.html?id=" + encodeURIComponent(article.id);
   }
 
   /* ---- Newsletter: advisory list ---- */
@@ -212,7 +255,7 @@
   /* ---- Article detail: renders whichever article.html?id=... was asked for ---- */
   var articleBody = document.querySelector("[data-article-body]");
   if (articleBody) {
-    var current = findArticle(queryParam("id"));
+    var current = findById(articles, queryParam("id"));
     var artHead = document.querySelector("[data-article-head]");
     var artMain = document.querySelector("[data-article-main]");
     var missHead = document.querySelector("[data-article-missing-head]");
@@ -254,51 +297,295 @@
         probe.src = bannerSrc;
       }
 
-      Array.prototype.forEach.call(current.body || [], function (block) {
-        if (block.type === "p" || block.type === "h2") {
-          articleBody.appendChild(el(block.type, "", block.text));
-          return;
-        }
-        if (block.type === "ul") {
-          var list = el("ul", "checklist");
-          Array.prototype.forEach.call(block.items || [], function (item) {
-            var li = document.createElement("li");
-            li.appendChild(icon("fa-solid fa-check"));
-            li.appendChild(el("span", "", item));
-            list.appendChild(li);
-          });
-          articleBody.appendChild(list);
-        }
-        /* Unknown block types are skipped rather than thrown on. */
-      });
-
-      var downloads = document.querySelector("[data-article-downloads]");
-      var downloadList = document.querySelector("[data-article-download-list]");
-      if (downloads && downloadList) {
-        Array.prototype.forEach.call(current.attachments || [], function (item) {
-          var file = item && safeFile(item.file);
-          if (!file) return;
-          var link = el("a", "dl");
-          link.href = "assets/docs/" + encodeURIComponent(file);
-          link.setAttribute("download", file);
-          var fileIcon = el("span", "dl__icon");
-          fileIcon.appendChild(icon(/\.pdf$/i.test(file) ? "fa-solid fa-file-pdf" : "fa-solid fa-file-lines"));
-          link.appendChild(fileIcon);
-          link.appendChild(el("span", "dl__title", item.label || file));
-          var action = el("span", "dl__action");
-          action.appendChild(el("span", "", "Download"));
-          action.appendChild(icon("fa-solid fa-download"));
-          link.appendChild(action);
-          downloadList.appendChild(link);
-        });
-        downloads.hidden = downloadList.children.length === 0;
-      }
+      renderBlocks(articleBody, current.body);
+      renderAttachments(
+        document.querySelector("[data-article-downloads]"),
+        document.querySelector("[data-article-download-list]"),
+        current.attachments
+      );
 
       if (artHead) artHead.hidden = false;
       if (artMain) artMain.hidden = false;
       document.title = current.title + " \u2014 Rural Bank of Digos";
       var desc = document.querySelector("meta[name=\"description\"]");
       if (desc) desc.setAttribute("content", current.summary || "");
+    }
+  }
+
+  /* ---- Foreclosed assets: shared property data (see assets/scripts/properties.js) ---- */
+  var properties = window.RBD_PROPERTIES || [];
+  var HEAD_OFFICE = { office: "Head Office", phone: "+082 553-4641", email: "rbdigos@rbap.org" };
+
+  function propertyUrl(property) {
+    return "property.html?id=" + encodeURIComponent(property.id);
+  }
+  function isAmount(n) {
+    return typeof n === "number" && isFinite(n) && n > 0;
+  }
+  function formatPrice(price) {
+    if (!isAmount(price)) return "Price upon inquiry";
+    /* Whole pesos show no decimals; anything with centavos always shows two (890,000.50). */
+    var digits = price % 1 === 0 ? 0 : 2;
+    return "\u20B1" + price.toLocaleString("en-PH", { minimumFractionDigits: digits, maximumFractionDigits: 2 });
+  }
+  function formatArea(sqm) {
+    return sqm.toLocaleString("en-PH") + " sq m";
+  }
+  /* Valid photos only, as { src, alt }; entries with a path or no file are dropped. */
+  function propertyPhotos(property) {
+    var photos = [];
+    Array.prototype.forEach.call(property.photos || [], function (photo) {
+      var file = photo && safeFile(photo.file);
+      if (!file) return;
+      photos.push({ src: "assets/images/properties/" + encodeURIComponent(file), alt: photo.alt || property.title || "" });
+    });
+    return photos;
+  }
+  function propertyLine(container, iconName, text) {
+    if (!text) return;
+    var line = el("span", "property__line");
+    line.appendChild(icon(iconName));
+    line.appendChild(el("span", "", text));
+    container.appendChild(line);
+  }
+  function areaSummary(property) {
+    var parts = [];
+    if (isAmount(property.lotArea)) parts.push("Lot " + formatArea(property.lotArea));
+    if (isAmount(property.floorArea)) parts.push("Floor " + formatArea(property.floorArea));
+    return parts.join(" \u00B7 ");
+  }
+
+  /* Decides whether a listing card stays visible for the current filters.
+     query  search box text, already trimmed and lower-cased ("" when the box is empty).
+     type   selected property type, exactly as written in properties.js ("" means all types). */
+  function propertyMatches(property, query, type) {
+    // TODO(human): return true only when the property fits both the type filter and the search text.
+    return true;
+  }
+
+  /* ---- Foreclosed assets: listing cards + search / type filter ---- */
+  var propertyList = document.querySelector("[data-property-list]");
+  if (propertyList) {
+    var propFilters = document.querySelector("[data-property-filters]");
+    var propSearch = document.querySelector("[data-property-search]");
+    var propType = document.querySelector("[data-property-type]");
+    var propEmpty = document.querySelector("[data-property-empty]");
+    var propCards = [];
+    var propTypes = [];
+
+    Array.prototype.forEach.call(properties, function (property) {
+      var card = el("article", "property");
+
+      /* The photo repeats the title link, so it is kept out of the tab order and screen reader output. */
+      var photoLink = el("a", "property__photo");
+      photoLink.href = propertyUrl(property);
+      photoLink.tabIndex = -1;
+      photoLink.setAttribute("aria-hidden", "true");
+      var cover = propertyPhotos(property)[0];
+      if (cover) {
+        var img = el("img");
+        img.src = cover.src;
+        img.alt = "";
+        img.loading = "lazy";
+        photoLink.appendChild(img);
+      } else {
+        photoLink.classList.add("property__photo--empty");
+        photoLink.appendChild(icon("fa-solid fa-house"));
+      }
+      card.appendChild(photoLink);
+
+      var body = el("div", "property__body");
+      if (property.type) body.appendChild(el("span", "tag tag--rates", property.type));
+      var title = el("h3", "property__title");
+      var titleLink = el("a", "", property.title);
+      titleLink.href = propertyUrl(property);
+      title.appendChild(titleLink);
+      body.appendChild(title);
+      if (property.summary) body.appendChild(el("p", "property__summary", property.summary));
+
+      var lines = el("div", "property__lines");
+      propertyLine(lines, "fa-solid fa-location-dot", property.location);
+      propertyLine(lines, "fa-solid fa-ruler-combined", areaSummary(property));
+      if (lines.children.length) body.appendChild(lines);
+
+      var foot = el("div", "property__foot");
+      foot.appendChild(el("span", "property__price" + (isAmount(property.price) ? "" : " property__price--ask"), formatPrice(property.price)));
+      var more = el("a", "property__more", "View details");
+      more.href = propertyUrl(property);
+      more.appendChild(icon("fa-solid fa-arrow-right"));
+      foot.appendChild(more);
+      body.appendChild(foot);
+
+      card.appendChild(body);
+      propertyList.appendChild(card);
+      propCards.push({ node: card, property: property });
+
+      if (property.type && propTypes.indexOf(property.type) === -1) propTypes.push(property.type);
+    });
+
+    if (propType) {
+      propTypes.sort().forEach(function (type) {
+        var option = el("option", "", type);
+        option.value = type;
+        propType.appendChild(option);
+      });
+    }
+    /* Nothing to filter when nothing is listed. */
+    if (propFilters) propFilters.hidden = properties.length === 0;
+
+    var applyPropertyFilter = function () {
+      var q = propSearch ? propSearch.value.trim().toLowerCase() : "";
+      var t = propType ? propType.value : "";
+      var shown = 0;
+      propCards.forEach(function (entry) {
+        var hit = propertyMatches(entry.property, q, t);
+        entry.node.hidden = !hit;
+        if (hit) shown++;
+      });
+      if (propEmpty) {
+        propEmpty.hidden = shown !== 0;
+        propEmpty.textContent = properties.length === 0
+          ? "No properties are listed for sale at the moment."
+          : "No property matches your search. Try another town or property type.";
+      }
+    };
+    if (propSearch) propSearch.addEventListener("input", applyPropertyFilter);
+    if (propType) propType.addEventListener("change", applyPropertyFilter);
+    applyPropertyFilter();
+  }
+
+  /* ---- Property detail: renders whichever property.html?id=... was asked for ---- */
+  var propertyBody = document.querySelector("[data-property-body]");
+  if (propertyBody) {
+    var prop = findById(properties, queryParam("id"));
+    var propHead = document.querySelector("[data-property-head]");
+    var propMain = document.querySelector("[data-property-main]");
+    var propMissHead = document.querySelector("[data-property-missing-head]");
+    var propMiss = document.querySelector("[data-property-missing]");
+    var fill = function (selector, text) {
+      var node = document.querySelector(selector);
+      if (node) node.textContent = text || "";
+      return node;
+    };
+
+    if (!prop) {
+      /* Sold properties are deleted from the data file, so old links land here. */
+      if (propMissHead) propMissHead.hidden = false;
+      if (propMiss) propMiss.hidden = false;
+      document.title = "Property not found \u2014 Rural Bank of Digos";
+    } else {
+      var typeTag = fill("[data-property-type-tag]", prop.type);
+      if (typeTag) typeTag.hidden = !prop.type;
+      fill("[data-property-location]", prop.location);
+      fill("[data-property-title]", prop.title);
+      var summaryNode = fill("[data-property-summary]", prop.summary);
+      if (summaryNode) summaryNode.hidden = !prop.summary;
+      var priceNode = fill("[data-property-price]", formatPrice(prop.price));
+      if (priceNode) priceNode.classList.toggle("property__price--ask", !isAmount(prop.price));
+
+      var specs = document.querySelector("[data-property-specs]");
+      if (specs) {
+        var addSpec = function (label, value) {
+          if (!value) return;
+          var row = el("div", "specs__row");
+          row.appendChild(el("dt", "", label));
+          row.appendChild(el("dd", "", value));
+          specs.appendChild(row);
+        };
+        addSpec("Property type", prop.type);
+        addSpec("Location", prop.location);
+        if (isAmount(prop.lotArea)) addSpec("Lot area", formatArea(prop.lotArea));
+        if (isAmount(prop.floorArea)) addSpec("Floor area", formatArea(prop.floorArea));
+      }
+
+      var gallery = document.querySelector("[data-property-gallery]");
+      var mainPhoto = document.querySelector("[data-property-photo]");
+      var thumbs = document.querySelector("[data-property-thumbs]");
+      var photos = propertyPhotos(prop);
+      if (gallery && mainPhoto && photos.length) {
+        var showPhoto = function (index) {
+          mainPhoto.src = photos[index].src;
+          mainPhoto.alt = photos[index].alt;
+          if (!thumbs) return;
+          Array.prototype.forEach.call(thumbs.children, function (thumb, i) {
+            thumb.setAttribute("aria-pressed", i === index ? "true" : "false");
+          });
+        };
+        if (thumbs && photos.length > 1) {
+          photos.forEach(function (photo, i) {
+            var thumb = el("button", "gallery__thumb");
+            thumb.type = "button";
+            thumb.setAttribute("aria-label", "Show photo " + (i + 1) + " of " + photos.length);
+            var thumbImg = el("img");
+            thumbImg.src = photo.src;
+            thumbImg.alt = "";
+            thumbImg.loading = "lazy";
+            thumb.appendChild(thumbImg);
+            thumb.addEventListener("click", function () { showPhoto(i); });
+            thumbs.appendChild(thumb);
+          });
+        } else if (thumbs) {
+          thumbs.hidden = true;
+        }
+        showPhoto(0);
+        gallery.hidden = false;
+      }
+
+      renderBlocks(propertyBody, prop.body);
+      propertyBody.hidden = propertyBody.children.length === 0;
+
+      /* Accepts the <iframe> code from Google Maps (Share > Embed a map) or just its src link.
+         Anything that is not a https://www.google.com/maps/embed link comes back empty. */
+      var mapEmbedSrc = function (value) {
+        if (typeof value !== "string") return "";
+        var raw = value.trim();
+        var tag = /<iframe[^>]*\ssrc\s*=\s*["']([^"']+)["']/i.exec(raw);
+        if (tag) raw = tag[1];
+        else if (raw.indexOf("<") !== -1) return "";
+        raw = raw.replace(/&amp;/g, "&");
+        try {
+          var url = new URL(raw);
+          if (url.protocol === "https:" && url.hostname === "www.google.com" && url.pathname.indexOf("/maps/embed") === 0) {
+            return url.href;
+          }
+        } catch (err) {}
+        return "";
+      };
+      var mapPanel = document.querySelector("[data-property-map]");
+      var mapFrame = document.querySelector("[data-property-map-frame]");
+      var mapSrc = mapEmbedSrc(prop.mapEmbed);
+      if (mapPanel && mapFrame && mapSrc) {
+        var frame = el("iframe");
+        frame.src = mapSrc;
+        frame.title = "Map showing " + (prop.title || "the property");
+        frame.loading = "lazy";
+        frame.referrerPolicy = "no-referrer-when-downgrade";
+        frame.allowFullscreen = true;
+        mapFrame.appendChild(frame);
+        /* The embed link does not open well as a page of its own, so the button searches the address instead. */
+        var mapLink = document.querySelector("[data-property-map-link]");
+        if (mapLink) {
+          if (prop.location) mapLink.href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(prop.location);
+          else mapLink.parentNode.hidden = true;
+        }
+        mapPanel.hidden = false;
+      }
+
+      /* Each contact field falls back to the head office on its own. */
+      var contact = prop.contact || {};
+      var phone = contact.phone || HEAD_OFFICE.phone;
+      var email = contact.email || HEAD_OFFICE.email;
+      fill("[data-property-office]", contact.office || HEAD_OFFICE.office);
+      var phoneLink = fill("[data-property-phone]", phone);
+      if (phoneLink) phoneLink.href = "tel:" + phone.replace(/[^\d+]/g, "");
+      var emailLink = fill("[data-property-email]", email);
+      if (emailLink) emailLink.href = "mailto:" + email;
+
+      if (propHead) propHead.hidden = false;
+      if (propMain) propMain.hidden = false;
+      document.title = prop.title + " \u2014 Properties for Sale \u2014 Rural Bank of Digos";
+      var propDesc = document.querySelector("meta[name=\"description\"]");
+      if (propDesc) propDesc.setAttribute("content", prop.summary || "");
     }
   }
 })();

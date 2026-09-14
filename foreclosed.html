@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>News &amp; advisories — Rural Bank of Digos</title>
-    <meta name="description" content="Announcements, advisories and service notices from Rural Bank of Digos.">
+    <title>Properties for Sale — Rural Bank of Digos</title>
+    <meta name="description" content="Lots, houses and commercial properties for sale by Rural Bank of Digos.">
     <link rel="icon" href="assets/images/logo-mark-navy.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,10 +42,10 @@
                             aria-hidden="true"></i><span>Services</span></a>
                     <a class="nav-link" href="branches.html"><i class="fa-solid fa-building-columns"
                             aria-hidden="true"></i><span>Branches</span></a>
-                    <a class="nav-link is-active" href="newsletter.html" aria-current="page"><i
-                            class="fa-solid fa-newspaper" aria-hidden="true"></i><span>Newsletter</span></a>
-                    <a class="nav-link" href="foreclosed.html"><i class="fa-solid fa-house-flag"
-                            aria-hidden="true"></i><span>Properties for Sale</span></a>
+                    <a class="nav-link" href="newsletter.html"><i class="fa-solid fa-newspaper"
+                            aria-hidden="true"></i><span>Newsletter</span></a>
+                    <a class="nav-link is-active" href="foreclosed.html" aria-current="page"><i
+                            class="fa-solid fa-house-flag" aria-hidden="true"></i><span>Properties for Sale</span></a>
                     <a class="nav-link" href="reports.html"><i class="fa-solid fa-chart-column"
                             aria-hidden="true"></i><span>Reports</span></a>
                 </nav>
@@ -54,56 +54,46 @@
     </header>
     <main>
 
-        <section class="section section--sunken section--tight" data-article-hero>
+        <section class="section section--sunken section--tight">
             <div class="wrap">
-                <a class="backlink" href="newsletter.html"><i class="fa-solid fa-arrow-left"
-                        aria-hidden="true"></i>News &amp; advisories</a>
-                <div class="sec-head" data-article-head style="margin-top:16px" hidden>
-                    <div class="article-meta">
-                        <span class="tag tag--notice" data-article-tag></span>
-                        <time class="notice__date" data-article-date></time>
+                <div class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-house-flag" aria-hidden="true"></i>Bank-owned
+                        properties</span>
+                    <h1 class="sec-title">Properties for sale</h1>
+                    <p class="sec-sub">Lots, houses and commercial properties acquired by the bank and now open to
+                        buyers. Contact the handling office to arrange a viewing.</p>
+                </div>
+                <div class="filters" data-property-filters>
+                    <div class="field filters__search">
+                        <label class="field-label" for="property-search">Search by location or title</label>
+                        <div class="control"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input
+                                class="input" id="property-search" type="search"
+                                placeholder="Try &ldquo;Digos&rdquo; or &ldquo;Bansalan&rdquo;" data-property-search>
+                        </div>
                     </div>
-                    <h1 class="sec-title" data-article-title></h1>
-                    <p class="sec-sub" data-article-summary></p>
+                    <div class="field filters__type">
+                        <label class="field-label" for="property-type">Property type</label>
+                        <select class="select" id="property-type" data-property-type>
+                            <option value="">All property types</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="sec-head" data-article-missing-head style="margin-top:16px" hidden>
-                    <span class="eyebrow"><i class="fa-solid fa-circle-question"
-                            aria-hidden="true"></i>Not found</span>
-                    <h1 class="sec-title">We could not find that article</h1>
-                    <p class="sec-sub">The advisory you asked for is no longer posted, or the link was mistyped.</p>
-                </div>
-                <div class="stack" data-article-missing hidden>
-                    <p class="empty">Please head back to the newsletter for the advisories we have posted.</p>
-                    <div><a class="btn btn--primary" href="newsletter.html"><i class="fa-solid fa-newspaper"
-                                aria-hidden="true"></i><span>View news &amp; advisories</span></a></div>
-                </div>
-                <noscript>
-                    <p class="empty" style="margin-top:16px">Enable JavaScript to read this advisory, or call your
-                        branch on +082 553-4641.</p>
-                </noscript>
             </div>
         </section>
 
-        <section class="section section--tight" data-article-main hidden>
+        <section class="section section--tight" id="properties">
             <div class="wrap">
-                <div class="split split--wide-left">
-                    <div class="stack">
-                        <div class="prose" data-article-body></div>
-                        <div class="panel" data-article-downloads hidden>
-                            <h2 class="card-title">Downloads</h2>
-                            <div class="panel__list" data-article-download-list></div>
-                        </div>
-                        <div><a class="backlink" href="newsletter.html"><i class="fa-solid fa-arrow-left"
-                                    aria-hidden="true"></i>Back to news &amp; advisories</a></div>
-                    </div>
-                    <div class="stack">
-                        <div class="card card--sunken">
-                            <h2 class="card-title">Consumer assistance</h2>
-                            <p class="card-text">Unresolved concern? Contact us at <strong>+082 553-4641</strong> or
-                                <strong>rbdigos@rbap.org</strong>. You may also reach BSP Consumer Affairs at (02)
-                                8708-7087.</p>
-                        </div>
-                    </div>
+                <div class="grid grid--3" data-property-list></div>
+                <p class="empty" data-property-empty hidden>No properties are listed for sale at the moment.</p>
+                <noscript>
+                    <p class="empty">Enable JavaScript to view the properties for sale, or call us on
+                        +082 553-4641.</p>
+                </noscript>
+                <div class="card card--sunken" style="margin-top:40px">
+                    <h2 class="card-title">Before you buy</h2>
+                    <p class="card-text">Properties are sold on an as-is, where-is basis. Prices and availability may
+                        change without notice and are confirmed by the handling office. For inquiries, contact us at
+                        <strong>+082 553-4641</strong> or <strong>rbdigos@rbap.org</strong>.</p>
                 </div>
             </div>
         </section>
@@ -131,16 +121,6 @@
                         <li><a href="foreclosed.html">Properties for sale</a></li>
                     </ul>
                 </div>
-                <!-- <div class="footer__col">
-                    <h2>About RBDigos</h2>
-                    <ul>
-                        <li><a href="#">Our story</a></li>
-                        <li><a href="#">Board &amp; management</a></li>
-                        <li><a href="branches.html">Branches</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="newsletter.html">News &amp; advisories</a></li>
-                    </ul>
-                </div> -->
                 <div class="footer__col">
                     <h2>Transparency</h2>
                     <ul>
@@ -190,7 +170,7 @@
             </div>
         </div>
     </div>
-    <script src="assets/scripts/articles.js"></script>
+    <script src="assets/scripts/properties.js"></script>
     <script src="assets/scripts/site.js"></script>
 </body>
 
