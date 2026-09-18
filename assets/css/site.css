@@ -338,7 +338,7 @@ img{max-width:100%;display:block}
 /* ---------- Carousel ---------- */
 .carousel{position:relative;overflow:hidden;height:600px;background:var(--brand-navy-900);color:#fff}
 .carousel .eyebrow{color:var(--brand-blue-200)}
-.carousel__brandmark{position:absolute;top:20px;right:24px;z-index:4;height:28px;opacity:.9;pointer-events:none}
+.carousel__brandmark{position:absolute;top:20px;right:24px;z-index:4;height:28px;opacity:.9;pointer-events:none;transition:opacity var(--dur-base) var(--ease-standard)}
 
 .carousel__slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity var(--dur-slow) var(--ease-standard),visibility 0s linear var(--dur-slow)}
 .carousel__slide.is-active{opacity:1;visibility:visible;transition-delay:0s,0s;z-index:2}
@@ -359,6 +359,16 @@ img{max-width:100%;display:block}
 .carousel__dots{position:absolute;left:0;right:0;bottom:26px;z-index:5;display:flex;justify-content:center;gap:10px}
 .carousel__dot{width:10px;height:10px;padding:0;border:none;border-radius:var(--radius-circle);background:rgba(255,255,255,.4);cursor:pointer;transition:background var(--dur-base) var(--ease-standard),transform var(--dur-base) var(--ease-standard)}
 .carousel__dot.is-active{background:#fff;transform:scale(1.3)}
+
+/* Light slide: an announcement banner shown as-is (no navy scrim), with navy text in the banner's open middle. */
+/* Center the banner's logo pair (x≈43.2% of the 3:1 image) rather than the image, so the left and right
+   margins match. Clamped between 100% and 0 so the shift never uncovers the navy behind the photo. */
+.carousel__slide--light{container-type:size}
+.carousel__slide--light .carousel__photo{background-position:clamp(100%, 50cqw - 129.5cqh, 0px) 58%}
+.carousel__slide--light .carousel__title{color:var(--brand-navy-900)}
+.carousel__slide--light .carousel__lead{color:var(--text-body)}
+/* The white brandmark would sit on the banner's own logos. */
+.carousel:has(.carousel__slide--light.is-active) .carousel__brandmark{opacity:0}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;overflow:hidden;background:var(--gradient-brand);color:#fff}
@@ -612,6 +622,7 @@ img{max-width:100%;display:block}
 .carousel{height:480px}
 .carousel__title{font:var(--type-h2)}
 .carousel__arrow{width:40px;height:40px}
+/* TODO(human): light slide on shorter carousels — fade the cropped banner behind the text */
 }
 @media (max-width:720px){
 .filters__search,.filters__type{flex:1 1 100%;max-width:none}
