@@ -249,10 +249,8 @@ img{max-width:100%;display:block}
 .logo:hover{text-decoration:none}
 .nav{margin-left:auto;display:flex;gap:4px;align-items:center}
 .nav-link{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:var(--radius-pill);text-decoration:none;font:var(--fw-semibold) var(--text-sm)/1 var(--font-display);color:var(--text-body);transition:background var(--dur-base) var(--ease-standard),color var(--dur-base) var(--ease-standard)}
-.nav-link i{font-size:13px;opacity:.6}
 .nav-link:hover{background:var(--action-secondary);color:var(--brand-navy-900);text-decoration:none}
 .nav-link.is-active{background:var(--brand-navy-900);color:#fff}
-.nav-link.is-active i{opacity:1}
 .nav-toggle{display:none;margin-left:auto;width:44px;height:44px;border:1.5px solid var(--border-subtle);border-radius:var(--radius-md);background:#fff;color:var(--brand-navy-900);font-size:18px;cursor:pointer}
 
 /* ---------- Sections ---------- */
